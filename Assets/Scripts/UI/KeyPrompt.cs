@@ -16,6 +16,7 @@ public class KeyPrompt : MonoBehaviour
         hit.transform.localScale = player.localScale;
     }
 
+    
     private void OnTriggerEnter2D(Collider2D hitCheck)
     {
         if (hitCheck.CompareTag("SkillUse"))
@@ -27,4 +28,6 @@ public class KeyPrompt : MonoBehaviour
     {
         canPress = false;
     }
+    
+
 }
