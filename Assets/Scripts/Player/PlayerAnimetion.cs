@@ -1,17 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerAnimetion : MonoBehaviour
 {
     private Animator anim;
-    public Rigidbody2D RB;
+    public Rigidbody2D PL;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        RB = GetComponent<Rigidbody2D>();
-        
     }
 
     private void Update()
@@ -21,7 +20,11 @@ public class PlayerAnimetion : MonoBehaviour
 
     private void SetAnimetion()
     {
-        anim.SetFloat("velocityx", Mathf.Abs(RB.velocity.x));
+        anim.SetFloat("velocityx", Mathf.Abs(PL.velocity.x));
+
     }
 
+
+    
 }
+
