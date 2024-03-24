@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: 873264f61ad044e49a234ddc5b0f21db
+guid: 7cbbebbc95431d749957292d4d936cd9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7573953333031662375
-    second: MedicinalFlower_0
+      213: 703327040916960571
+    second: "\u85E5\u6750\u82B1 \u66F8_0"
   - first:
-      213: 4442235041914577824
-    second: MedicinalFlower_1
+      213: 652375957462925902
+    second: "\u85E5\u6750\u82B1 \u66F8_1"
   - first:
-      213: 1837438444054287966
-    second: MedicinalFlower_2
+      213: 4672646577900862181
+    second: "\u85E5\u6750\u82B1 \u66F8_2"
   - first:
-      213: -5540320820465016428
-    second: MedicinalFlower_3
+      213: 5270758218139954554
+    second: "\u85E5\u6750\u82B1 \u66F8_3"
   - first:
-      213: 2471603733158908598
-    second: MedicinalFlower_4
+      213: 3774314654152614085
+    second: "\u85E5\u6750\u82B1 \u66F8_4"
+  - first:
+      213: -1906716992058985489
+    second: "\u85E5\u6750\u82B1 \u66F8_5"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,31 +106,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -142,28 +121,70 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MedicinalFlower_0
+      name: "\u85E5\u6750\u82B1 \u66F8_0"
       rect:
         serializedVersion: 2
-        x: 47
+        x: 48
         y: 1061
-        width: 694
+        width: 693
         height: 533
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 723fcb88d661c1960800000000000000
-      internalID: 7573953333031662375
+      spriteID: b3538c2a738b2c900800000000000000
+      internalID: 703327040916960571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MedicinalFlower_2
+      name: "\u85E5\u6750\u82B1 \u66F8_1"
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 780
+        width: 1115
+        height: 765
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4245941a74bd0900800000000000000
+      internalID: 652375957462925902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u85E5\u6750\u82B1 \u66F8_2"
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 1032
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eab9bc4e4398d040800000000000000
+      internalID: 4672646577900862181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u85E5\u6750\u82B1 \u66F8_3"
       rect:
         serializedVersion: 2
         x: 31
@@ -171,35 +192,56 @@ TextureImporter:
         width: 712
         height: 489
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e56908a9784ef7910800000000000000
-      internalID: 1837438444054287966
+      spriteID: a7de3397cae752940800000000000000
+      internalID: 5270758218139954554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MedicinalFlower_3
+      name: "\u85E5\u6750\u82B1 \u66F8_4"
       rect:
         serializedVersion: 2
         x: 114
         y: 74
         width: 564
-        height: 416
+        height: 415
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4916b725193dc13b0800000000000000
-      internalID: -5540320820465016428
+      spriteID: 5c061574e2f016430800000000000000
+      internalID: 3774314654152614085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u85E5\u6750\u82B1 \u66F8_5"
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 479
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe37f197ffaf985e0800000000000000
+      internalID: -1906716992058985489
       vertices: []
       indices: 
       edges: []

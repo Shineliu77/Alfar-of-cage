@@ -1,31 +1,34 @@
 fileFormatVersion: 2
-guid: dfb424f0c4655ad458c791aeb063a44f
+guid: bf77a095d545db64abf39252409dd677
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7717784975389617229
-    second: "\u756B\u6846 \u74F6\u5B50_0"
+      213: 3708250898195073856
+    second: TimeUseSkill_1
   - first:
-      213: -66741502886735589
-    second: "\u756B\u6846 \u74F6\u5B50_1"
+      213: -1578728175156902161
+    second: TimeUseSkill_3
   - first:
-      213: -220767182587104438
-    second: "\u756B\u6846 \u74F6\u5B50_2"
+      213: 963828297027508461
+    second: TimeUseSkill_5
   - first:
-      213: 183079618472252098
-    second: "\u756B\u6846 \u74F6\u5B50_3"
+      213: 3133901969628421033
+    second: TimeUseSkill_7
   - first:
-      213: -4834024356945837490
-    second: "\u756B\u6846 \u74F6\u5B50_4"
+      213: -2285256541448165422
+    second: TimeUseSkill_9
   - first:
-      213: -5813321718139411138
-    second: "\u756B\u6846 \u74F6\u5B50_5"
+      213: 6590678696196558230
+    second: TimeUseSkill_11
   - first:
-      213: -1402222063238862713
-    second: "\u756B\u6846 \u74F6\u5B50_6"
+      213: -8630286415396886857
+    second: TimeUseSkill_13
   - first:
-      213: 4856635691145470661
-    second: "\u756B\u6846 \u74F6\u5B50_7"
+      213: -7129789142344997786
+    second: TimeUseSkill_15
+  - first:
+      213: 9158254620218300984
+    second: TimeUseSkill_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -70,7 +73,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 330
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -127,13 +130,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u756B\u6846 \u74F6\u5B50_0"
+      name: TimeUseSkill_1
       rect:
         serializedVersion: 2
-        x: 69
-        y: 777
-        width: 670
-        height: 827
+        x: 16
+        y: 0
+        width: 552
+        height: 975
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4ce1f66b841b1b60800000000000000
-      internalID: 7717784975389617229
+      spriteID: 04bc0f47b8a567330800000000000000
+      internalID: 3708250898195073856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u756B\u6846 \u74F6\u5B50_1"
+      name: TimeUseSkill_3
       rect:
         serializedVersion: 2
-        x: 852
-        y: 777
-        width: 668
-        height: 827
+        x: 584
+        y: 0
+        width: 554
+        height: 975
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1119ace4f2e21ff0800000000000000
-      internalID: -66741502886735589
+      spriteID: fe64fd2d61b371ae0800000000000000
+      internalID: -1578728175156902161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u756B\u6846 \u74F6\u5B50_2"
+      name: TimeUseSkill_5
       rect:
         serializedVersion: 2
-        x: 1661
-        y: 777
-        width: 668
-        height: 827
+        x: 1151
+        y: 0
+        width: 554
+        height: 975
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a43f4d7ca6dafecf0800000000000000
-      internalID: -220767182587104438
+      spriteID: de85bc4cab4306d00800000000000000
+      internalID: 963828297027508461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u756B\u6846 \u74F6\u5B50_3"
+      name: TimeUseSkill_7
       rect:
         serializedVersion: 2
-        x: 69
-        y: 149
-        width: 206
-        height: 501
+        x: 1720
+        y: 0
+        width: 552
+        height: 975
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c217a861fd6a8200800000000000000
-      internalID: 183079618472252098
+      spriteID: 9ab599cbc3bdd7b20800000000000000
+      internalID: 3133901969628421033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u756B\u6846 \u74F6\u5B50_4"
+      name: TimeUseSkill_9
       rect:
         serializedVersion: 2
-        x: 373
-        y: 147
-        width: 205
-        height: 502
+        x: 2287
+        y: 0
+        width: 555
+        height: 975
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,20 +228,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4248a885781aecb0800000000000000
-      internalID: -4834024356945837490
+      spriteID: 2d7285a88432940e0800000000000000
+      internalID: -2285256541448165422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u756B\u6846 \u74F6\u5B50_5"
+      name: TimeUseSkill_11
       rect:
         serializedVersion: 2
-        x: 664
-        y: 143
-        width: 309
-        height: 514
+        x: 2856
+        y: 0
+        width: 553
+        height: 975
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,20 +249,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e35ac3992bee25fa0800000000000000
-      internalID: -5813321718139411138
+      spriteID: 69dc783fa5bc67b50800000000000000
+      internalID: 6590678696196558230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u756B\u6846 \u74F6\u5B50_6"
+      name: TimeUseSkill_13
       rect:
         serializedVersion: 2
-        x: 1080
-        y: 145
-        width: 144
-        height: 500
+        x: 3424
+        y: 0
+        width: 553
+        height: 975
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,20 +270,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 788ae68767e4a8ce0800000000000000
-      internalID: -1402222063238862713
+      spriteID: 7b6a36cfa301b3880800000000000000
+      internalID: -8630286415396886857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u756B\u6846 \u74F6\u5B50_7"
+      name: TimeUseSkill_15
       rect:
         serializedVersion: 2
-        x: 1318
-        y: 149
-        width: 143
-        height: 501
+        x: 3991
+        y: 0
+        width: 555
+        height: 975
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,8 +291,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c2a536fd6c366340800000000000000
-      internalID: 4856635691145470661
+      spriteID: 664e61fdc86ed0d90800000000000000
+      internalID: -7129789142344997786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeUseSkill_17
+      rect:
+        serializedVersion: 2
+        x: 4561
+        y: 0
+        width: 552
+        height: 975
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a11b8fd08a81f70800000000000000
+      internalID: 9158254620218300984
       vertices: []
       indices: 
       edges: []
