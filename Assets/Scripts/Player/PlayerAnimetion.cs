@@ -8,6 +8,7 @@ public class PlayerAnimetion : MonoBehaviour
     private Animator anim;
     public Rigidbody2D PL;
     public bool InUseSkill;
+    public bool IsJump;
 
     private void Awake()
     {
@@ -27,12 +28,23 @@ public class PlayerAnimetion : MonoBehaviour
         {
             InUseSkill = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Space");
+            IsJump = true;
+        }
+        else
+        {
+            IsJump = false;
+        }
     }
 
     private void SetAnimetion()
     {
         anim.SetFloat("velocityx", Mathf.Abs(PL.velocity.x));
         anim.SetBool("skillkey", InUseSkill);
+        anim.SetBool("JumpYN", IsJump);
 
     }
 
