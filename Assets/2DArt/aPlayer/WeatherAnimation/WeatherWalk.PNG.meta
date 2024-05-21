@@ -1,0 +1,465 @@
+fileFormatVersion: 2
+guid: 7860085ca1ebe12499d45df7d574a0d3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7391463878224379896
+    second: WeatherWalk_0
+  - first:
+      213: -8616677917555236782
+    second: WeatherWalk_1
+  - first:
+      213: -6882441310078260503
+    second: WeatherWalk_2
+  - first:
+      213: -995866183110582910
+    second: WeatherWalk_3
+  - first:
+      213: 5671292594408204669
+    second: WeatherWalk_4
+  - first:
+      213: 3846545629559157819
+    second: WeatherWalk_5
+  - first:
+      213: -6958962461305813282
+    second: WeatherWalk_6
+  - first:
+      213: -7309733680290856550
+    second: WeatherWalk_7
+  - first:
+      213: 7705786283634017225
+    second: WeatherWalk_8
+  - first:
+      213: 1599077008841748219
+    second: WeatherWalk_9
+  - first:
+      213: -8234911526398554712
+    second: WeatherWalk_10
+  - first:
+      213: 4601002638428359073
+    second: WeatherWalk_11
+  - first:
+      213: 351543493922796579
+    second: WeatherWalk_12
+  - first:
+      213: -471862629203705105
+    second: WeatherWalk_13
+  - first:
+      213: -8782805355549135367
+    second: WeatherWalk_14
+  - first:
+      213: 8691836896822637594
+    second: WeatherWalk_15
+  - first:
+      213: 5299769045221185949
+    second: WeatherWalk_16
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 350
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WeatherWalk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 720
+        height: 1124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fff1bf4c31c39660800000000000000
+      internalID: 7391463878224379896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatherWalk_1
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 0
+        width: 735
+        height: 1125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250ea2c46196b6880800000000000000
+      internalID: -8616677917555236782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatherWalk_2
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 0
+        width: 752
+        height: 1125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eaaf4dd718ac70a0800000000000000
+      internalID: -6882441310078260503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatherWalk_3
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 0
+        width: 763
+        height: 1125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d9ed79bf8fd22f0800000000000000
+      internalID: -995866183110582910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatherWalk_4
+      rect:
+        serializedVersion: 2
+        x: 2974
+        y: 0
+        width: 771
+        height: 1125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79210b119a74be40800000000000000
+      internalID: 5671292594408204669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatherWalk_5
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 0
+        width: 780
+        height: 1125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b347436cedca16530800000000000000
+      internalID: 3846545629559157819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatherWalk_6
+      rect:
+        serializedVersion: 2
+        x: 4525
+        y: 0
+        width: 796
+        height: 1125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6c698f28ccc6f90800000000000000
+      internalID: -6958962461305813282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatherWalk_7
+      rect:
+        serializedVersion: 2
+        x: 5321
+        y: 0
+        width: 803
+        height: 1125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a910e8742fb9e8a90800000000000000
+      internalID: -7309733680290856550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatherWalk_8
+      rect:
+        serializedVersion: 2
+        x: 6123
+        y: 0
+        width: 792
+        height: 1125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c345174cc370fa60800000000000000
+      internalID: 7705786283634017225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatherWalk_9
+      rect:
+        serializedVersion: 2
+        x: 6915
+        y: 0
+        width: 786
+        height: 1125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfea1883110113610800000000000000
+      internalID: 1599077008841748219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatherWalk_10
+      rect:
+        serializedVersion: 2
+        x: 7701
+        y: 0
+        width: 764
+        height: 1125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad8e30e897b7bd80800000000000000
+      internalID: -8234911526398554712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatherWalk_11
+      rect:
+        serializedVersion: 2
+        x: 8466
+        y: 0
+        width: 762
+        height: 1125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a94822c58b0adf30800000000000000
+      internalID: 4601002638428359073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatherWalk_12
+      rect:
+        serializedVersion: 2
+        x: 9231
+        y: 0
+        width: 748
+        height: 1125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3243e56f1fee0e400800000000000000
+      internalID: 351543493922796579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatherWalk_13
+      rect:
+        serializedVersion: 2
+        x: 9980
+        y: 0
+        width: 752
+        height: 1125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe20883507b9379f0800000000000000
+      internalID: -471862629203705105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
