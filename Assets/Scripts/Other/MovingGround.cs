@@ -10,6 +10,9 @@ public class MovingGround : MonoBehaviour
     public float speed;
     Vector3 tranGetPots;
 
+    private bool isPaused = false;
+    private float pauseTimer = 0f;
+
     private void Start()
     {
         tranGetPots = posB.position;
@@ -17,6 +20,16 @@ public class MovingGround : MonoBehaviour
 
     private void Update()
     {
+        if (isPaused)
+        {
+            pauseTimer -= Time.deltaTime;
+            if (pauseTimer <= 0)
+            {
+                isPaused = false;
+            }
+            return;
+        }
+
         if (Vector2.Distance(transform.position, posA.position) < 0.05f)
         {
             tranGetPots=posB.position;
@@ -28,6 +41,9 @@ public class MovingGround : MonoBehaviour
         }
 
         transform.position = Vector3.MoveTowards(transform.position,tranGetPots, speed * Time.deltaTime);
+
+        
+
     }
 
     private void OnCollisionEnter2D(UnityEngine.Collision2D col)
@@ -45,6 +61,12 @@ public class MovingGround : MonoBehaviour
         {
             col.transform.parent = null;
         }
+    }
+
+    public void Pause(float duration)
+    {
+        isPaused = true;
+        pauseTimer = duration;
     }
 
 }

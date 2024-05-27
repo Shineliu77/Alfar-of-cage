@@ -9,6 +9,9 @@ TagManager:
   - Gameplayer
   - Sky
   - wall
+  - Enemy
+  - DeadZone
+  - Gear
   layers:
   - Default
   - TransparentFX
@@ -16,10 +19,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Trap
+  - Enemy
+  - Gear
   - 
   - 
   - 

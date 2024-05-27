@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using DG.Tweening;
 //�ҥΦۭq����J��Ҩt��
 
 public class PlayerControl : MonoBehaviour
@@ -48,7 +49,7 @@ public class PlayerControl : MonoBehaviour
         if (isGround == true)
         {
             isJump = false;
-            canJump = 1;
+            canJump = 2;
         }
     }
     private void FixedUpdate() //固定時間運行
@@ -73,9 +74,10 @@ public class PlayerControl : MonoBehaviour
     }
     private void Jump(InputAction.CallbackContext obj)  //是否跳躍判定
     {
-        // Debug.Log("jump");
+        Debug.Log("jump");
         if (canJump > 0)
         {
+            Debug.Log(PlayerRB.velocity);
             PlayerRB.velocity = Vector2.up * JumpPower;  //執行
             isJump = true;
             if (isJump == true)
@@ -87,21 +89,86 @@ public class PlayerControl : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D feet)
+    
+    
+
+    public int maxHealth = 3; // 玩家最大生命值
+    private int currentHealth; // 玩家當前生命值
+
+    [SerializeField]private SpriteRenderer spriteRenderer; // 用於改變玩家顏色
+    private bool canHurt =true;
+    private void Start()
     {
-        if (feet.CompareTag("Ground") || feet.CompareTag("SkillUse"))
+        currentHealth = maxHealth; // 初始化當前生命值
+            }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy")&&canHurt)
         {
-            isGround = true;
+            TakeDamage();
+            StartCoroutine(CanHurtTimer());
         }
 
-    }
-    private void OnTriggerExit2D(Collider2D feet)
+    if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("SkillUse"))
     {
-        if (feet.CompareTag("Ground") || feet.CompareTag("SkillUse"))
+        isGround = true;
+    }
+
+}
+
+    private void OnCollisionExit2D(Collision2D feet)
+    {
+        if (feet.gameObject.CompareTag("Ground") || feet.gameObject.CompareTag("SkillUse"))
         {
             isGround = false;
         }
-       
+
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("DeadZone") )
+        {
+            Die();
+        }
+    }
+
+    private IEnumerator CanHurtTimer()
+    {
+        canHurt = false;
+        yield return new WaitForSeconds(1f);
+        canHurt = true;
+    }
+
+    private void TakeDamage()
+    {
+        currentHealth--;
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+        else
+        {
+            FlashRed();
+        }
+    }
+
+    private void Die()
+    {
+        // 玩家死亡處理邏輯，比如重新開始遊戲或顯示死亡畫面
+        Debug.Log("Player Died");
+        // 停止所有玩家的操作，這裡可以根據需求進行調整
+        Destroy(gameObject);
+    }
+
+    private void FlashRed()
+    {
+        spriteRenderer.color = Color.white;
+        spriteRenderer.DOColor(Color.red, 1f).SetLoops(6, LoopType.Yoyo);
+        Debug.Log("Player");
+
     }
 }
 
