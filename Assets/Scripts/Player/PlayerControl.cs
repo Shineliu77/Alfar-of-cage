@@ -24,7 +24,6 @@ public class PlayerControl : MonoBehaviour
     private void Awake()  //在遊戲開始時第一個啟動
     {
         input = new InputControl();
-
         input.GamePlay.Jump.started += Jump;  //註冊名為Jump的函數方法
 
     }
@@ -74,10 +73,10 @@ public class PlayerControl : MonoBehaviour
     }
     private void Jump(InputAction.CallbackContext obj)  //是否跳躍判定
     {
-        Debug.Log("jump");
+        //Debug.Log("jump");
         if (canJump > 0)
         {
-            Debug.Log(PlayerRB.velocity);
+           // Debug.Log(PlayerRB.velocity);
             PlayerRB.velocity = Vector2.up * JumpPower;  //執行
             isJump = true;
             if (isJump == true)
@@ -88,10 +87,7 @@ public class PlayerControl : MonoBehaviour
         }
 
     }
-
-    
-    
-
+            
     public int maxHealth = 3; // 玩家最大生命值
     private int currentHealth; // 玩家當前生命值
 
@@ -100,22 +96,26 @@ public class PlayerControl : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth; // 初始化當前生命值
-            }
+    }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D feet)
     {
-        if (collision.gameObject.CompareTag("Enemy")&&canHurt)
+        if (feet.gameObject.CompareTag("Enemy") && canHurt)
         {
             TakeDamage();
             StartCoroutine(CanHurtTimer());
         }
 
-    if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("SkillUse"))
-    {
-        isGround = true;
+        if (feet.gameObject.CompareTag("Ground") || feet.gameObject.CompareTag("SkillUse"))
+        {
+            isGround = true;
+
+            //Debug.Log("isGround");
+        }
+
     }
 
-}
+    
 
     private void OnCollisionExit2D(Collision2D feet)
     {
@@ -161,6 +161,7 @@ public class PlayerControl : MonoBehaviour
         Debug.Log("Player Died");
         // 停止所有玩家的操作，這裡可以根據需求進行調整
         Destroy(gameObject);
+        
     }
 
     private void FlashRed()

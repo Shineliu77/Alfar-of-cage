@@ -43,7 +43,7 @@ public partial class @InputControl : IInputActionCollection2, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Look"",
@@ -70,7 +70,7 @@ public partial class @InputControl : IInputActionCollection2, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -309,7 +309,7 @@ public partial class @InputControl : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""0f5884c1-9ea0-4f8d-a4dd-92ada8e09a4c"",
                     ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""TimeStop"",
@@ -320,7 +320,7 @@ public partial class @InputControl : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""b3402155-4923-4021-a396-51a7dcc75a52"",
                     ""path"": ""<Gamepad>/buttonEast"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""TimeStop"",

@@ -2142,11 +2142,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299579180865096597, guid: 595c5f64a9a574ded9d3f960d106f8d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.09917
+      value: -24.417393
       objectReference: {fileID: 0}
     - target: {fileID: 299579180865096597, guid: 595c5f64a9a574ded9d3f960d106f8d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.157302
+      value: 5.372302
       objectReference: {fileID: 0}
     - target: {fileID: 299579180865096597, guid: 595c5f64a9a574ded9d3f960d106f8d2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2202,7 +2202,7 @@ PrefabInstance:
       objectReference: {fileID: 8448099182356615456}
     - target: {fileID: 7667493945685201122, guid: 595c5f64a9a574ded9d3f960d106f8d2, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7882436373815063352, guid: 595c5f64a9a574ded9d3f960d106f8d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2296,6 +2296,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4086990457732197656, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
+      propertyPath: m_Size.x
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086990457732197656, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
+      propertyPath: m_Size.y
+      value: 6.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4663063681804358549, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.15
@@ -2306,7 +2314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5838105465604780408, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
       propertyPath: JumpPower
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6073194893102123321, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
       propertyPath: m_IsActive
@@ -2322,7 +2330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7562941554333152828, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
       propertyPath: m_GravityScale
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7794321005297349222, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
       propertyPath: m_Name

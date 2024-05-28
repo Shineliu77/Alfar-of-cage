@@ -6,9 +6,9 @@ using UnityEngine;
 public class MovingGround : MonoBehaviour
 {
 
-    public Transform posA, posB;
-    public float speed;
-    Vector3 tranGetPots;
+    public Transform posA, posB; //巡邏點AB
+    public float speed; //速度
+    Vector3 tranGetPots; 
 
     private bool isPaused = false;
     private float pauseTimer = 0f;
@@ -46,16 +46,16 @@ public class MovingGround : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(UnityEngine.Collision2D col)
+    private void OnCollisionEnter2D(UnityEngine.Collision2D col) //當人物站上平台會跟著移動
     {
-        //Debug.Log(col.collider.tag );
+        
         if (col.collider.tag=="Gameplayer")
         {
             col.transform.parent = this.transform;
         }
     }
 
-    private void OnCollisionExit2D(UnityEngine.Collision2D col)
+    private void OnCollisionExit2D(UnityEngine.Collision2D col) //人物離開平台則不受限制
     {
         if (col.collider.tag == "Gameplayer")
         {

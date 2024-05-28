@@ -31,7 +31,7 @@ public class PlayerAnimetion : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Space");
+            //Debug.Log("Space");
             IsJump = true;
         }
         else
