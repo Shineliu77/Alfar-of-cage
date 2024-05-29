@@ -49,7 +49,7 @@ public class MovingGround : MonoBehaviour
     private void OnCollisionEnter2D(UnityEngine.Collision2D col) //當人物站上平台會跟著移動
     {
         
-        if (col.collider.tag=="Gameplayer")
+        if (col.collider.tag=="Player")
         {
             col.transform.parent = this.transform;
         }
@@ -57,7 +57,7 @@ public class MovingGround : MonoBehaviour
 
     private void OnCollisionExit2D(UnityEngine.Collision2D col) //人物離開平台則不受限制
     {
-        if (col.collider.tag == "Gameplayer")
+        if (col.collider.tag == "Player")
         {
             col.transform.parent = null;
         }
