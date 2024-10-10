@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9167246087195494240}
   - component: {fileID: 9167246087195494247}
-  - component: {fileID: 9167246087195494242}
   - component: {fileID: 9167246087195494241}
   - component: {fileID: 9167246087195494243}
   - component: {fileID: 9167246087195494268}
@@ -86,24 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9167246087195494242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9167246087195494246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f6739e45069ce341bac4f9b10b61b99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  normalspeed: 4
-  chasespeed: 7
-  currentspeed: 0
-  enemy: {fileID: 9167246087195494241}
-  pointA: {fileID: 9167246088341682715}
-  pointB: {fileID: 9167246089245702277}
 --- !u!70 &9167246087195494241
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -158,7 +139,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.876, y: 2.964}
+    oldSize: {x: 2.345, y: 3.705}
     newSize: {x: 4.69, y: 7.41}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

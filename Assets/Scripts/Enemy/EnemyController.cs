@@ -4,89 +4,76 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    protected bool isPaused = false;
-    protected float pauseTimer = 0f;
+    public Transform player;              // 玩家對象
+    public float chaseRange = 5f;         // 追逐範圍
+    public float normalSpeed = 2f;        // 普通速度
+    public float dashSpeed = 5f;          // 衝刺速度
+    public float dashDuration = 0.5f;     // 衝刺持續時間
+    public float maxDamage = 10f;         // 最大傷害值
+    public float damageImpactMultiplier = 1.5f;  // 速度對傷害的影響倍數
 
-    public float normalspeed;//一般速度
-    public float chasespeed;//追擊速度
-    public float currentspeed;//當前速度
-    public Collider2D enemy;//敵人的碰撞體
-    public Transform pointA, pointB; //巡邏點AB
-    protected Vector3 targetPosition; // 當前目標位置
-    protected int faceDir;//角色方向
-    
+    private float currentSpeed;           // 當前速度
+    private bool isDashing = false;       // 是否在衝刺
 
-    protected void Awake()
+    void Update()
     {
-        currentspeed = normalspeed;
-        targetPosition = pointA.position; // 初始化目標位置為點 A
-    }
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-    protected void Update()
-    {
-        if (isPaused)
+        // 檢查是否在追逐範圍內
+        if (distanceToPlayer < chaseRange)
         {
-            pauseTimer -= Time.deltaTime;
-            enemy.enabled = false;
-            if (pauseTimer <= 0)
+            if (!isDashing)
             {
-                isPaused = false;
-                enemy.enabled = true;
+                StartCoroutine(DashTowardsPlayer());
             }
-            return;
         }
 
-        // 實現敵人的移動或攻擊行為
-        Move();
+
     }
 
-
-    protected void Move()
+    private IEnumerator DashTowardsPlayer()
     {
-        // 移動敵人到目標位置
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, currentspeed * Time.deltaTime);
+        isDashing = true;
+        float elapsed = 0f;
 
-        // 檢查是否到達目標位置
-        if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
+        while (elapsed < dashDuration)
         {
-            // 反轉目標位置
-            targetPosition = targetPosition == pointA.position ? pointB.position : pointA.position;
+            currentSpeed = Mathf.Lerp(normalSpeed, dashSpeed, elapsed / dashDuration);
+            elapsed += Time.deltaTime;
+
+            MoveTowardsPlayer(currentSpeed);
+            yield return null;
         }
 
-        if (targetPosition == pointA.position)
-            faceDir = 1;
-        if (targetPosition == pointB.position)
-            faceDir = -1;
-
-        //人物翻轉
-        transform.localScale = new Vector3(faceDir, 1, 1);
+        // 衝刺結束後，計算傷害
+        DealDamageToPlayer();
+        isDashing = false;
     }
 
-    protected void OnTriggerEnter2D(Collider2D haveplayer)
+    private void MoveTowardsPlayer(float speed)
     {
+        Vector2 direction = (player.position - transform.position).normalized;
+        transform.position += (Vector3)(direction * speed * Time.deltaTime);
+    }
 
-        if (currentspeed == normalspeed && haveplayer.gameObject.CompareTag("Gameplayer"))
+    private void DealDamageToPlayer()
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 0.5f);
+        foreach (var hit in hits)
         {
-            currentspeed = chasespeed;
+            if (hit.CompareTag("Player"))
+            {
+                PlayerHealth playerHealth = hit.GetComponent<PlayerHealth>();
+                if (playerHealth != null)
+                {
+                    float impactSpeed = Mathf.Clamp(currentSpeed * damageImpactMultiplier, 0, maxDamage);
+                    playerHealth.TakeDamage(impactSpeed);  // 對玩家造成傷害
+                }
+            }
         }
-        return;
-
     }
 
-    protected void OnTriggerExit2D(Collider2D haveplayer)
-    {
 
-        if (currentspeed == chasespeed && haveplayer.gameObject.CompareTag("Gameplayer"))
-        {
-            currentspeed = normalspeed;
-        }
-        return;
 
-    }
 
-    public void Pause(float duration)
-    {
-        isPaused = true;
-        pauseTimer = duration;
-    }
 }

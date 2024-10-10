@@ -22,10 +22,6 @@ public class PlayerSkill : MonoBehaviour
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, skillRange, enemyLayer);
 
-        foreach (Collider2D enemy in hitEnemies)
-        {
-            enemy.GetComponent<EnemyController>()?.Pause(skillDuration);
-        }
 
         Collider2D[] hitGear = Physics2D.OverlapCircleAll(transform.position, skillRange, GearLayer);
         foreach (Collider2D Gear in hitGear)
