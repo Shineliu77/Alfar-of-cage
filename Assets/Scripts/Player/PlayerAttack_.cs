@@ -21,10 +21,18 @@ public class PlayerAttack_ : MonoBehaviour
 
     void FireMagicMissile()
     {
+
+        // 計算玩家到滑鼠的方向
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (mousePosition - firePoint.position).normalized;
+
         // 創建飛彈並設置其初始位置與方向
         GameObject missile = Instantiate(magicMissilePrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = missile.GetComponent<Rigidbody2D>();
         rb.velocity = firePoint.up * missileSpeed;
+
+        // 設置飛彈速度和方向
+        rb.velocity = direction * missileSpeed;
 
         // 設定飛彈的攻擊傷害與最大飛行距離
         MagicMissile missileScript = missile.GetComponent<MagicMissile>();

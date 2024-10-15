@@ -33,5 +33,6 @@ public class EnemyHealth : MonoBehaviour
     {
         // ¾P·´¼Ä¤H
         Destroy(gameObject);
+        Debug.Log("BL Alfar died.");
     }
 }
