@@ -134,7 +134,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2086232885
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 818ec56b17c484f658994f6299b994d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -186,7 +186,7 @@ TrailRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2086232885
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 19
   m_Time: 0.4
   m_Parameters:
@@ -267,8 +267,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03805256, y: -0.19492674}
-  m_Size: {x: 1.0701332, y: 2.7462373}
+  m_Offset: {x: -0.048117638, y: -0.24525535}
+  m_Size: {x: 1.3117123, y: 3.4508388}
   m_Direction: 0
 --- !u!1 &2415374018019836380
 GameObject:
@@ -340,7 +340,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2086232885
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 80
   m_Sprite: {fileID: 1756555204071850034, guid: 57e0e389978494d4b8a1fceba2c16e23, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -390,7 +390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6508201008039751073
 Transform:
   m_ObjectHideFlags: 0
@@ -443,7 +443,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2086232885
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 944c1daa7166f4ef0b7a7db8253c083a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -495,7 +495,7 @@ TrailRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2086232885
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 19
   m_Time: 0.4
   m_Parameters:
@@ -576,8 +576,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.028165817, y: -0.10495949}
-  m_Size: {x: 1.1079731, y: 2.817912}
+  m_Offset: {x: -0.048297882, y: -0.15025544}
+  m_Size: {x: 1.3696861, y: 3.5728421}
   m_Direction: 0
 --- !u!1 &6073194893102123321
 GameObject:
@@ -598,7 +598,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6073194891795868476
 Transform:
   m_ObjectHideFlags: 0
@@ -651,7 +651,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2086232885
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 5ffa8eacc46c86f4bb109fdac1daf663, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -703,7 +703,7 @@ TrailRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2086232885
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 19
   m_Time: 0.4
   m_Parameters:
@@ -784,8 +784,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.1046114, y: -0.05341983}
-  m_Size: {x: 0.93675995, y: 2.7580142}
+  m_Offset: {x: -0.050538063, y: -0.07369733}
+  m_Size: {x: 1.0449047, y: 3.4204106}
   m_Direction: 0
 --- !u!95 &6073194893102123322
 Animator:

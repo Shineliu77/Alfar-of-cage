@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 4912188197907214979}
   m_Layer: 0
   m_Name: "\u5E73\u53F0 (1)"
-  m_TagString: SkillUse
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,8 +180,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.0047073364, y: -1.5902891}
-      - {x: -2.0146575, y: -0.45748317}
-      - {x: 2.0285964, y: -0.4700935}
+      - {x: -1.9932959, y: -0.45748317}
+      - {x: 2.000114, y: -0.4700935}
 --- !u!1 &5951294837712221969
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 5951294838821024301}
   m_Layer: 0
   m_Name: "\u6A6B\u5411\u5E73\u53F0"
-  m_TagString: Untagged
+  m_TagString: SkillUse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
