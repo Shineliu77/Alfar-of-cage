@@ -5,32 +5,31 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float maxHealth = 100f;
-    private float currentHealth;
-
-    public Slider healthSlider;
+    public int playerHealth = 100;
+    private Rigidbody2D rb;
 
     void Start()
     {
-        currentHealth = maxHealth;
-        healthSlider.maxValue = maxHealth;
-        healthSlider.value = currentHealth;
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    public void TakeDamage(float damage)
+    // 玩家受到傷害
+    public void TakeDamage(int damage, Vector2 knockback)
     {
-        currentHealth -= damage;
-        healthSlider.value = currentHealth;
-
-        if (currentHealth <= 0)
+        playerHealth -= damage;
+        if (playerHealth <= 0)
         {
-            Die();
+            Debug.Log("Player Died");
+            // 玩家死亡邏輯
         }
+
+        // 對玩家施加擊退效果
+        ApplyKnockback(knockback);
     }
 
-    void Die()
+    // 擊退效果
+    private void ApplyKnockback(Vector2 knockback)
     {
-        // 玩家死亡邏輯
-        Debug.Log("Player died.");
+        rb.AddForce(knockback, ForceMode2D.Impulse); // 對玩家施加擊退
     }
 }
