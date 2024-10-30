@@ -1,34 +1,22 @@
 fileFormatVersion: 2
-guid: bf77a095d545db64abf39252409dd677
+guid: 0c884d971118a43fd8ba0c96911bd6aa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3708250898195073856
-    second: TimeUseSkill_1
+      213: -6779128136799609090
+    second: TimejumpNew_0
   - first:
-      213: -1578728175156902161
-    second: TimeUseSkill_3
+      213: 3944720478069390027
+    second: TimejumpNew_1
   - first:
-      213: 963828297027508461
-    second: TimeUseSkill_5
+      213: 9043235744496806872
+    second: TimejumpNew_2
   - first:
-      213: 3133901969628421033
-    second: TimeUseSkill_7
+      213: 3741271366426945499
+    second: TimejumpNew_3
   - first:
-      213: -2285256541448165422
-    second: TimeUseSkill_9
-  - first:
-      213: 6590678696196558230
-    second: TimeUseSkill_11
-  - first:
-      213: -8630286415396886857
-    second: TimeUseSkill_13
-  - first:
-      213: -7129789142344997786
-    second: TimeUseSkill_15
-  - first:
-      213: 9158254620218300984
-    second: TimeUseSkill_17
+      213: -4934812625656508027
+    second: TimejumpNew_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -73,7 +61,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 265
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -92,7 +80,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -104,19 +92,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 4096
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -128,7 +104,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
-    maxTextureSize: 4096
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -140,7 +128,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -154,13 +142,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TimeUseSkill_1
+      name: TimejumpNew_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 552
-        height: 975
+        x: 52
+        y: 40
+        width: 635
+        height: 1075
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04bc0f47b8a567330800000000000000
-      internalID: 3708250898195073856
+      spriteID: efe143f70e2bbe1a0800000000000000
+      internalID: -6779128136799609090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TimeUseSkill_3
+      name: TimejumpNew_1
       rect:
         serializedVersion: 2
-        x: 584
-        y: 0
-        width: 554
-        height: 975
+        x: 698
+        y: 40
+        width: 658
+        height: 1075
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe64fd2d61b371ae0800000000000000
-      internalID: -1578728175156902161
+      spriteID: bcaf881ff567eb630800000000000000
+      internalID: 3944720478069390027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TimeUseSkill_5
+      name: TimejumpNew_2
       rect:
         serializedVersion: 2
-        x: 1151
-        y: 0
-        width: 554
-        height: 975
+        x: 1357
+        y: 40
+        width: 635
+        height: 1105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de85bc4cab4306d00800000000000000
-      internalID: 963828297027508461
+      spriteID: 8dbe8da1ff6008d70800000000000000
+      internalID: 9043235744496806872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TimeUseSkill_7
+      name: TimejumpNew_3
       rect:
         serializedVersion: 2
-        x: 1720
-        y: 0
-        width: 552
-        height: 975
+        x: 1996
+        y: 40
+        width: 635
+        height: 1112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,20 +219,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ab599cbc3bdd7b20800000000000000
-      internalID: 3133901969628421033
+      spriteID: bd7e7345c7aabe330800000000000000
+      internalID: 3741271366426945499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TimeUseSkill_9
+      name: TimejumpNew_4
       rect:
         serializedVersion: 2
-        x: 2287
-        y: 0
-        width: 555
-        height: 975
+        x: 2633
+        y: 40
+        width: 635
+        height: 1141
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,92 +240,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d7285a88432940e0800000000000000
-      internalID: -2285256541448165422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TimeUseSkill_11
-      rect:
-        serializedVersion: 2
-        x: 2856
-        y: 0
-        width: 553
-        height: 975
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69dc783fa5bc67b50800000000000000
-      internalID: 6590678696196558230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TimeUseSkill_13
-      rect:
-        serializedVersion: 2
-        x: 3424
-        y: 0
-        width: 553
-        height: 975
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b6a36cfa301b3880800000000000000
-      internalID: -8630286415396886857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TimeUseSkill_15
-      rect:
-        serializedVersion: 2
-        x: 3991
-        y: 0
-        width: 555
-        height: 975
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 664e61fdc86ed0d90800000000000000
-      internalID: -7129789142344997786
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TimeUseSkill_17
-      rect:
-        serializedVersion: 2
-        x: 4561
-        y: 0
-        width: 552
-        height: 975
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83a11b8fd08a81f70800000000000000
-      internalID: 9158254620218300984
+      spriteID: 58191ae0016048bb0800000000000000
+      internalID: -4934812625656508027
       vertices: []
       indices: 
       edges: []
