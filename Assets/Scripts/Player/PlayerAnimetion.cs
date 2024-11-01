@@ -13,21 +13,24 @@ public class PlayerAnimetion : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
+
     }
+
 
     private void Update()
     {
         SetAnimetion();
 
-        if (Input.GetKeyDown(KeyCode.Q))
+
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Q))
         {
-            //Debug.Log("Q");
             InUseSkill = true;
         }
         else
         {
             InUseSkill = false;
         }
+
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -45,10 +48,9 @@ public class PlayerAnimetion : MonoBehaviour
         anim.SetFloat("velocityx", Mathf.Abs(PL.velocity.x));
         anim.SetBool("skillkey", InUseSkill);
         anim.SetBool("JumpYN", IsJump);
-
     }
 
 
-    
+
 }
 
