@@ -9,6 +9,7 @@ public class PlayerAnimetion : MonoBehaviour
     public Rigidbody2D PL;
     public bool InUseSkill;
     public bool IsJump;
+    [SerializeField]private Animator Skill;
 
     private void Awake()
     {
@@ -31,6 +32,12 @@ public class PlayerAnimetion : MonoBehaviour
             InUseSkill = false;
         }
 
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Skill.ResetTrigger("play");
+            Skill.SetTrigger("play");
+        }
+        
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
