@@ -16,6 +16,7 @@ public class ChasingEnemy : MonoBehaviour
 
     private float lastAttackTime = 0f;
     private Rigidbody2D rb;
+    
 
     void Start()
     {
@@ -40,6 +41,8 @@ public class ChasingEnemy : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
         }
+
+       
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -56,49 +59,42 @@ public class ChasingEnemy : MonoBehaviour
                 PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
                 if (playerHealth != null)
                 {
-                    Vector2 knockbackDirection = (collision.transform.position - transform.position).normalized;
-                    playerHealth.TakeDamage(damage, knockbackDirection * knockbackForce);
+                   
+                    playerHealth.TakeDamage(damage);
                 }
 
                 // 記錄上次攻擊時間
                 lastAttackTime = Time.time;
 
-                // 敵人後退簡單移動
-                StartCoroutine(RetreatAfterHit());
+             
             }
         }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("PlayerProjectile"))
+        if (collision.CompareTag("Player"))
         {
             TakeDamage(10); // 例如飛彈造成10點傷害
             Destroy(collision.gameObject);
 
-            Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
-            rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
+         
         }
     }
 
     public void TakeDamage(int damage)
     {
         enemyHealth -= damage;
+        
         if (enemyHealth <= 0)
         {
             Destroy(gameObject);
         }
+
     }
 
-    private IEnumerator RetreatAfterHit()
-    {
-        Vector2 retreatDirection = -rb.velocity.normalized;
-        rb.velocity = retreatDirection * 2f; // 簡單的後退效果
 
-        yield return new WaitForSeconds(0.5f);
-
-        rb.velocity = Vector2.zero;
-    }
+ 
 
 
 }

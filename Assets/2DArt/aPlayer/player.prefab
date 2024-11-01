@@ -804,7 +804,7 @@ MonoBehaviour:
   PL: {fileID: 7562941554333152828}
   InUseSkill: 0
   IsJump: 0
-  Qhit: 0
+  Skill: {fileID: 0}
 --- !u!95 &6073194893102123322
 Animator:
   serializedVersion: 3
@@ -1063,7 +1063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magicMissilePrefab: {fileID: 6644551871252596991, guid: fff6a9aa8cee39d47a75d699dacec47b, type: 3}
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 1327521126053606428}
   missileSpeed: 10
   attackRange: 10
   attackDamage: 5
@@ -1080,6 +1080,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 100
+  control: {fileID: 5838105465604780408}
+  distance: 5
+  time: 0.3
 --- !u!114 &2649445021244466017
 MonoBehaviour:
   m_ObjectHideFlags: 0

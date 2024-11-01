@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int playerHealth = 100;
     private Rigidbody2D rb;
+    [SerializeField]private PlayerControl control;
 
     void Start()
     {
@@ -14,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // 玩家受到傷害
-    public void TakeDamage(int damage, Vector2 knockback)
+    public void TakeDamage(int damage)
     {
         playerHealth -= damage;
         if (playerHealth <= 0)
@@ -24,12 +25,59 @@ public class PlayerHealth : MonoBehaviour
         }
 
         // 對玩家施加擊退效果
-        ApplyKnockback(knockback);
+        ApplyKnockBack();
     }
 
-    // 擊退效果
-    private void ApplyKnockback(Vector2 knockback)
-    {
-        rb.AddForce(knockback, ForceMode2D.Impulse); // 對玩家施加擊退
-    }
+ 
+    
+        [Header("擊退距離"), SerializeField] private float distance;
+        [Header("擊退時間"), SerializeField] private float time;
+      
+        private Vector3 startPosition;
+        private Vector3 endPosition;
+        private float timer;
+        private bool isKnockBack;
+
+        public void ApplyKnockBack()
+        {
+            isKnockBack = true;
+
+            Vector3 direction = control.FaceDir == 1 ? Vector3.left : Vector3.right;
+
+            // if (faceDir == 1)
+            // {
+            //     direction = Vector3.left;
+            // }
+            // else
+            // {
+            //     direction = Vector3.right;
+            // }
+
+            startPosition = transform.position;
+            endPosition = startPosition + direction * distance;
+            transform.position = endPosition;
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                ApplyKnockBack();
+            }
+
+            if (isKnockBack)
+            {
+                timer += Time.deltaTime;
+                transform.position = Vector3.Lerp(startPosition, endPosition, timer / time);
+
+                if (timer >= time)
+                {
+                    isKnockBack = false;
+                    timer = 0;
+                }
+            }
+        }
+    
+
+
 }

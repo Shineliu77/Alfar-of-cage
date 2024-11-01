@@ -35,7 +35,10 @@ public class MagicMissile : MonoBehaviour
             EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
-                enemyHealth.TakeDamage(damage);  // 對敵人造成傷害
+                Vector3 dir = ((Vector2)transform.position - (Vector2)collision.transform.position ).normalized;
+                Vector3 newDir = new Vector3(-dir.x,0,0);
+                enemyHealth.TakeDamage(damage,newDir);
+                Debug.Log(dir);// 對敵人造成傷害
             }
             Destroy(gameObject);  // 碰撞後銷毀飛彈
         }

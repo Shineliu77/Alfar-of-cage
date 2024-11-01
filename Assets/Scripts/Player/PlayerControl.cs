@@ -17,7 +17,7 @@ public class PlayerControl : MonoBehaviour
     public Rigidbody2D PlayerRB;
     public int canJump = 1;
     public BoxCollider2D feet;
-
+    public float FaceDir  { get; private set; }
     private bool isJump;
     private bool isGround;
 
@@ -61,15 +61,15 @@ public class PlayerControl : MonoBehaviour
     {
         PlayerRB.velocity = new Vector2(inputLook.x * Speed, PlayerRB.velocity.y);
 
-        int faceDir = (int)transform.localScale.x;
+         FaceDir = (int)transform.localScale.x;
 
         if (inputLook.x > 0)
-            faceDir = 1;
+            FaceDir = 1;
         if (inputLook.x < 0)
-            faceDir = -1;
+            FaceDir = -1;
 
         //人物翻轉
-        transform.localScale = new Vector3(faceDir, 1, 1);
+        transform.localScale = new Vector3(FaceDir, 1, 1);
     }
     private void Jump(InputAction.CallbackContext obj)  //是否跳躍判定
     {
