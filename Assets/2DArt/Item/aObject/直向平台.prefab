@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 9160301650082334605}
   m_Layer: 0
   m_Name: "\u5E73\u53F0"
-  m_TagString: Untagged
+  m_TagString: SkillUse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,7 +193,7 @@ Transform:
   m_GameObject: {fileID: 7196039662061574498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7196039661497141810}
   m_Father: {fileID: 7196039662476267229}
@@ -214,6 +214,8 @@ MonoBehaviour:
   posA: {fileID: 7196039662050547668}
   posB: {fileID: 7196039661301271522}
   speed: 3
+  Ground: {fileID: 0}
+  move: {fileID: 0}
 --- !u!60 &9160301650082334605
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -253,7 +255,7 @@ GameObject:
   - component: {fileID: 7196039662476267229}
   m_Layer: 0
   m_Name: "\u76F4\u5411\u5E73\u53F0"
-  m_TagString: SkillUse
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

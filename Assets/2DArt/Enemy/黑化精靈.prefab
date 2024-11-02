@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 9167246087195494247}
   - component: {fileID: 9167246087195494241}
   - component: {fileID: 9167246087195494243}
+  - component: {fileID: 6091290418927219159}
+  - component: {fileID: 7395186472144356283}
   m_Layer: 8
   m_Name: Alfar
   m_TagString: Enemy
@@ -121,6 +123,42 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6091290418927219159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9167246087195494246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef5d31c42d4e6a9449921442455308f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 50
+  healthSlider: {fileID: 0}
+  distance: 0
+  time: 0
+--- !u!114 &7395186472144356283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9167246087195494246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ffccc2873767c43a4e3e1c7d3ea180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 5
+  detectionRange: 10
+  attackCooldown: 2
+  baseDamage: 10
+  maxDamage: 30
+  enemyHealth: 50
+  knockbackForce: 5
+  player: {fileID: 0}
 --- !u!1 &9167246088341682714
 GameObject:
   m_ObjectHideFlags: 0

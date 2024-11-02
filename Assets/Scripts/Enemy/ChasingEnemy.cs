@@ -11,11 +11,14 @@ public class ChasingEnemy : MonoBehaviour
     public int baseDamage = 10;
     public int maxDamage = 30;
     public int enemyHealth = 50;
-    public float knockbackForce = 5f; // ¼²À»®Éµ¹ª±®aªºÀ»°h¤O
+    public float knockbackForce = 5f; // ï¿½ï¿½ï¿½ï¿½ï¿½Éµï¿½ï¿½ï¿½ï¿½aï¿½ï¿½ï¿½ï¿½ï¿½hï¿½O
     public Transform player;
 
     private float lastAttackTime = 0f;
     private Rigidbody2D rb;
+    private bool isPaused = false;
+    private float pauseTimer = 0f;
+
     
 
     void Start()
@@ -31,11 +34,21 @@ public class ChasingEnemy : MonoBehaviour
     {
 
 
+        if (isPaused)
+        {
+            pauseTimer -= Time.deltaTime;
+            if (pauseTimer <= 0)
+            {
+                isPaused = false;
+            }
+            return;
+        }
+
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
         if (distanceToPlayer < detectionRange)
         {
-            // °lÀ»ª±®a
+            // ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½a
             Vector2 direction = (player.position - transform.position).normalized;
             rb.velocity = direction * chaseSpeed;
         }
@@ -53,11 +66,11 @@ public class ChasingEnemy : MonoBehaviour
         {
             if (Time.time - lastAttackTime >= attackCooldown)
             {
-                // ­pºâ¶Ë®`
+                // ï¿½pï¿½ï¿½Ë®`
                 float impactSpeed = rb.velocity.magnitude;
                 int damage = Mathf.Clamp((int)(baseDamage * impactSpeed), baseDamage, maxDamage);
 
-                // ¹ïª±®a³y¦¨¶Ë®`¨Ã¬I¥[À»°h
+                // ï¿½ïª±ï¿½aï¿½yï¿½ï¿½ï¿½Ë®`ï¿½Ã¬Iï¿½[ï¿½ï¿½ï¿½h
                 PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
                 if (playerHealth != null)
                 {
@@ -65,7 +78,7 @@ public class ChasingEnemy : MonoBehaviour
                     playerHealth.TakeDamage(damage);
                 }
 
-                // °O¿ý¤W¦¸§ðÀ»®É¶¡
+                // ï¿½Oï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¶ï¿½
                 lastAttackTime = Time.time;
 
              
@@ -77,7 +90,7 @@ public class ChasingEnemy : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            TakeDamage(10); // ¨Ò¦p­¸¼u³y¦¨10ÂI¶Ë®`
+            TakeDamage(10); // ï¿½Ò¦pï¿½ï¿½ï¿½uï¿½yï¿½ï¿½10ï¿½Iï¿½Ë®`
             Destroy(collision.gameObject);
 
          
@@ -95,7 +108,11 @@ public class ChasingEnemy : MonoBehaviour
 
     }
 
-
+public void Pause(float duration)
+    {
+        isPaused = true;
+        pauseTimer = duration;
+    }
  
 
 

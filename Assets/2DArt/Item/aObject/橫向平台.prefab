@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 4912188197907214979}
   m_Layer: 0
   m_Name: "\u5E73\u53F0 (1)"
-  m_TagString: Untagged
+  m_TagString: SkillUse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,6 +154,8 @@ MonoBehaviour:
   posA: {fileID: 5951294839200607012}
   posB: {fileID: 5951294837712221970}
   speed: 3
+  Ground: {fileID: 4912188197907214979}
+  move: {fileID: 0}
 --- !u!60 &4912188197907214979
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -223,7 +225,7 @@ GameObject:
   - component: {fileID: 5951294838821024301}
   m_Layer: 0
   m_Name: "\u6A6B\u5411\u5E73\u53F0"
-  m_TagString: SkillUse
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

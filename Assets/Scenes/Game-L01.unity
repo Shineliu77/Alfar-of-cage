@@ -894,47 +894,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &62951931 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9167246087195494246, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
-  m_PrefabInstance: {fileID: 1935202971}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &62951933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 62951931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef5d31c42d4e6a9449921442455308f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 50
-  healthSlider: {fileID: 705831146}
-  distance: 2.5
-  time: 0.3
---- !u!114 &62951934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 62951931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4ffccc2873767c43a4e3e1c7d3ea180, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseSpeed: 30
-  detectionRange: 10
-  attackCooldown: 1
-  baseDamage: 10
-  maxDamage: 30
-  enemyHealth: 50
-  knockbackForce: 5
-  player: {fileID: 1428946662}
 --- !u!1 &64549031
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,6 +907,7 @@ GameObject:
   - component: {fileID: 64549034}
   - component: {fileID: 64549036}
   - component: {fileID: 64549035}
+  - component: {fileID: 64549037}
   m_Layer: 0
   m_Name: "\u5F48\u8DF3\u8449\u5B50_0"
   m_TagString: Untagged
@@ -1052,7 +1012,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.3675766, y: -0.24122429}
+  m_Offset: {x: 0.3675766, y: -1.4269338}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1063,7 +1023,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.503189, y: 1.6023779}
+  m_Size: {x: 6.503189, y: 1.1280937}
   m_EdgeRadius: 0
 --- !u!114 &64549036
 MonoBehaviour:
@@ -1078,6 +1038,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceForce: 85
+--- !u!61 &64549037
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64549031}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.3557148, y: -0.07907176}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.3761973, y: 7.736363}
+    newSize: {x: 10.142271, y: 10.6375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.664768, y: 0.9383464}
+  m_EdgeRadius: 0
 --- !u!1 &69104103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,47 +1147,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &70359241 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9167246087195494246, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
-  m_PrefabInstance: {fileID: 496857664}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &70359243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70359241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef5d31c42d4e6a9449921442455308f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 50
-  healthSlider: {fileID: 705831146}
-  distance: 2.5
-  time: 0.3
---- !u!114 &70359244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70359241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4ffccc2873767c43a4e3e1c7d3ea180, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseSpeed: 30
-  detectionRange: 10
-  attackCooldown: 1
-  baseDamage: 10
-  maxDamage: 30
-  enemyHealth: 50
-  knockbackForce: 5
-  player: {fileID: 1428946662}
 --- !u!1 &73428625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1957,6 +1902,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 404649296}
     m_Modifications:
+    - target: {fileID: 7395186472144356283, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1428946662}
     - target: {fileID: 9167246087195494240, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1
@@ -2916,6 +2865,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 404649296}
     m_Modifications:
+    - target: {fileID: 7395186472144356283, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1428946662}
     - target: {fileID: 9167246087195494240, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1
@@ -4466,6 +4419,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 404649296}
     m_Modifications:
+    - target: {fileID: 7395186472144356283, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1428946662}
     - target: {fileID: 9167246087195494240, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1
@@ -4852,47 +4809,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &410047843 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9167246087195494246, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
-  m_PrefabInstance: {fileID: 128475536}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &410047845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410047843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4ffccc2873767c43a4e3e1c7d3ea180, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseSpeed: 30
-  detectionRange: 10
-  attackCooldown: 1
-  baseDamage: 10
-  maxDamage: 30
-  enemyHealth: 50
-  knockbackForce: 5
-  player: {fileID: 1428946662}
---- !u!114 &410047850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410047843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef5d31c42d4e6a9449921442455308f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 50
-  healthSlider: {fileID: 705831146}
-  distance: 2.5
-  time: 0.3
 --- !u!1 &418836291
 GameObject:
   m_ObjectHideFlags: 0
@@ -6205,6 +6121,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 404649296}
     m_Modifications:
+    - target: {fileID: 7395186472144356283, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1428946662}
     - target: {fileID: 9167246087195494240, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1
@@ -6745,47 +6665,6 @@ Transform:
   m_Father: {fileID: 1829829340}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &510357729 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9167246087195494246, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
-  m_PrefabInstance: {fileID: 378008240}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &510357731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510357729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef5d31c42d4e6a9449921442455308f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 50
-  healthSlider: {fileID: 705831146}
-  distance: 2.5
-  time: 0.3
---- !u!114 &510357732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510357729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4ffccc2873767c43a4e3e1c7d3ea180, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseSpeed: 30
-  detectionRange: 10
-  attackCooldown: 1
-  baseDamage: 10
-  maxDamage: 30
-  enemyHealth: 50
-  knockbackForce: 5
-  player: {fileID: 1428946662}
 --- !u!1 &526951658
 GameObject:
   m_ObjectHideFlags: 0
@@ -9871,7 +9750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5477718645401747293, guid: 799823bcce16ba942837d2a5c823f8bd, type: 3}
       propertyPath: m_TagString
-      value: Gear
+      value: SkillUse
       objectReference: {fileID: 0}
     - target: {fileID: 5951294837712221970, guid: 799823bcce16ba942837d2a5c823f8bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9883,6 +9762,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5951294838821024301, guid: 799823bcce16ba942837d2a5c823f8bd, type: 3}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5951294838821024301, guid: 799823bcce16ba942837d2a5c823f8bd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5951294838821024301, guid: 799823bcce16ba942837d2a5c823f8bd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5951294838821024301, guid: 799823bcce16ba942837d2a5c823f8bd, type: 3}
+      propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5951294838821024301, guid: 799823bcce16ba942837d2a5c823f8bd, type: 3}
@@ -14141,47 +14032,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1325278085 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9167246087195494246, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
-  m_PrefabInstance: {fileID: 2063876749}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1325278087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325278085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef5d31c42d4e6a9449921442455308f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 50
-  healthSlider: {fileID: 705831146}
-  distance: 2.5
-  time: 0.3
---- !u!114 &1325278088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325278085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4ffccc2873767c43a4e3e1c7d3ea180, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseSpeed: 30
-  detectionRange: 10
-  attackCooldown: 1
-  baseDamage: 10
-  maxDamage: 30
-  enemyHealth: 50
-  knockbackForce: 5
-  player: {fileID: 1428946662}
 --- !u!1 &1331107923
 GameObject:
   m_ObjectHideFlags: 3
@@ -14276,47 +14126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1332826914 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9167246087195494246, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
-  m_PrefabInstance: {fileID: 230377233}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1332826916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1332826914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef5d31c42d4e6a9449921442455308f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 50
-  healthSlider: {fileID: 705831146}
-  distance: 2.5
-  time: 0.3
---- !u!114 &1332826917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1332826914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4ffccc2873767c43a4e3e1c7d3ea180, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseSpeed: 30
-  detectionRange: 10
-  attackCooldown: 1
-  baseDamage: 10
-  maxDamage: 30
-  enemyHealth: 50
-  knockbackForce: 5
-  player: {fileID: 1428946662}
 --- !u!1 &1344905166
 GameObject:
   m_ObjectHideFlags: 0
@@ -14836,7 +14645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1980904067464219072, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -54.262222
+      value: -47.427757
       objectReference: {fileID: 0}
     - target: {fileID: 1980904067464219072, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14997,6 +14806,10 @@ PrefabInstance:
     - target: {fileID: 4524138348893344297, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524138348893344298, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4631686798389735578, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
       propertyPath: m_RootOrder
@@ -15204,7 +15017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8448099182944524724, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -54.262222
+      value: -47.427757
       objectReference: {fileID: 0}
     - target: {fileID: 8448099182944524724, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16913,47 +16726,6 @@ Transform:
   m_Father: {fileID: 1731932748}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1586600971 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9167246087195494246, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
-  m_PrefabInstance: {fileID: 2134939665}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1586600973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1586600971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef5d31c42d4e6a9449921442455308f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 50
-  healthSlider: {fileID: 705831146}
-  distance: 2.5
-  time: 0.3
---- !u!114 &1586600974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1586600971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4ffccc2873767c43a4e3e1c7d3ea180, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseSpeed: 30
-  detectionRange: 10
-  attackCooldown: 1
-  baseDamage: 10
-  maxDamage: 30
-  enemyHealth: 50
-  knockbackForce: 5
-  player: {fileID: 1428946662}
 --- !u!1001 &1597321423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21241,6 +21013,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 404649296}
     m_Modifications:
+    - target: {fileID: 7395186472144356283, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1428946662}
     - target: {fileID: 9167246087195494240, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1
@@ -22469,6 +22245,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 404649296}
     m_Modifications:
+    - target: {fileID: 7395186472144356283, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1428946662}
     - target: {fileID: 9167246087195494240, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1
@@ -22983,6 +22763,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 404649296}
     m_Modifications:
+    - target: {fileID: 7395186472144356283, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1428946662}
     - target: {fileID: 9167246087195494240, guid: 2db2ed39d5f6d4166bc4c29316ec135e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1

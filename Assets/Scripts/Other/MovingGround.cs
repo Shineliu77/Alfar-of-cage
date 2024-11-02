@@ -6,8 +6,10 @@ using UnityEngine;
 public class MovingGround : MonoBehaviour
 {
 
-    public Transform posA, posB; //¨µÅÞÂIAB
-    public float speed; //³t«×
+    public Transform posA, posB; //ï¿½ï¿½ï¿½ï¿½ï¿½IAB
+    public float speed; //ï¿½tï¿½ï¿½
+    public Collider2D Ground;
+    public Transform move;
     Vector3 tranGetPots; 
 
     private bool isPaused = false;
@@ -46,17 +48,17 @@ public class MovingGround : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(UnityEngine.Collision2D col) //·í¤Hª«¯¸¤W¥­¥x·|¸òµÛ²¾°Ê
+    private void OnCollisionEnter2D(UnityEngine.Collision2D col) //ï¿½ï¿½ï¿½Hï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½xï¿½|ï¿½ï¿½Û²ï¿½ï¿½ï¿½
     {
         
-        if (col.collider.tag=="Gameplayer")
+        if (col.collider.tag=="Player")
         {
-            Debug.Log("pLAYER");
+            Debug.Log("player");
             col.transform.parent = this.transform;
         }
     }
 
-    private void OnCollisionExit2D(UnityEngine.Collision2D col) //¤Hª«Â÷¶}¥­¥x«h¤£¨ü­­¨î
+    private void OnCollisionExit2D(UnityEngine.Collision2D col) //ï¿½Hï¿½ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½xï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     {
         if (col.collider.tag == "Player")
         {
