@@ -161,7 +161,7 @@ public class PlayerControl : MonoBehaviour
         Debug.Log("Player Died");
         // 停止所有玩家的操作，這裡可以根據需求進行調整
         Destroy(gameObject);
-        
+        GameObject.FindObjectOfType<GameOverManager>().ShowGameOver();
     }
 
     private void FlashRed()

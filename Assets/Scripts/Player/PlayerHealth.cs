@@ -22,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
         {
             Debug.Log("Player Died");
             // 玩家死亡邏輯
+            GameObject.FindObjectOfType<GameOverManager>().ShowGameOver();
         }
 
         // 對玩家施加擊退效果
@@ -60,10 +61,7 @@ public class PlayerHealth : MonoBehaviour
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                ApplyKnockBack();
-            }
+          
 
             if (isKnockBack)
             {

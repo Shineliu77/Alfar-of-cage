@@ -29,6 +29,8 @@ public class ChasingEnemy : MonoBehaviour
 
     void Update()
     {
+
+
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
         if (distanceToPlayer < detectionRange)
