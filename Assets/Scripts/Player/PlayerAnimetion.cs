@@ -25,6 +25,7 @@ public class PlayerAnimetion : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Q))
         {
+            //Debug.Log("Use");
             InUseSkill = true;
         }
         else

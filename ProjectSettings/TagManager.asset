@@ -61,6 +61,12 @@ TagManager:
   - name: ground
     uniqueID: 25560263
     locked: 0
+  - name: Light
+    uniqueID: 66681229
+    locked: 0
+  - name: Enemy
+    uniqueID: 3779444187
+    locked: 0
   - name: Player
     uniqueID: 2208734411
     locked: 0
