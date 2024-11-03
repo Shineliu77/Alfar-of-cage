@@ -10,7 +10,7 @@ public class Flower : MonoBehaviour
     public bool canUse;
     public bool playerin;
 
-    [Header("­p®É¾¹")]
+    [Header("ï¿½pï¿½É¾ï¿½")]
     public float waitTime;
     public float waitTimeCounter;
     public bool wait;
@@ -19,7 +19,7 @@ public class Flower : MonoBehaviour
     private void Start()
     {
         canUse = true;
-        waitTimeCounter = waitTime;
+        //waitTimeCounter = waitTime;
     }
 
     void Update()
@@ -52,14 +52,14 @@ public class Flower : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Gameplayer"))
+        if(collision.CompareTag("Player"))
         {
             playerin = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Gameplayer"))
+        if (collision.CompareTag("Player"))
         {
             playerin = false;
         }

@@ -9,7 +9,7 @@ public class MovingGround : MonoBehaviour
     public Transform posA, posB; //�����IAB
     public float speed; //�t��
     public Collider2D Ground;
-    public Transform move;
+    //public Transform move;
     Vector3 tranGetPots; 
 
     private bool isPaused = false;

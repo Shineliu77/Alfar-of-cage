@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 7196039661497141810}
   - component: {fileID: 7196039661497141812}
   - component: {fileID: 7196039661497141811}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "\u5716\u7247"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 7196039662061574499}
   - component: {fileID: 7196039662061574500}
   - component: {fileID: 9160301650082334605}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "\u5E73\u53F0"
   m_TagString: SkillUse
   m_Icon: {fileID: 0}
@@ -214,8 +214,7 @@ MonoBehaviour:
   posA: {fileID: 7196039662050547668}
   posB: {fileID: 7196039661301271522}
   speed: 3
-  Ground: {fileID: 0}
-  move: {fileID: 0}
+  Ground: {fileID: 9160301650082334605}
 --- !u!60 &9160301650082334605
 PolygonCollider2D:
   m_ObjectHideFlags: 0
