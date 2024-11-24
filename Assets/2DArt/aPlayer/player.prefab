@@ -1080,7 +1080,6 @@ GameObject:
   - component: {fileID: 5838105465604780408}
   - component: {fileID: 4313874352102088606}
   - component: {fileID: 5510439085460892578}
-  - component: {fileID: 2649445021244466017}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -1208,26 +1207,6 @@ MonoBehaviour:
   control: {fileID: 5838105465604780408}
   distance: 5
   time: 0.3
---- !u!114 &2649445021244466017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7794321005297349222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1bee9a38c3d99641bc3fb4f6d5f3298, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillRange: 5
-  skillDuration: 5
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  GearLayer:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!1 &7849130467420802642
 GameObject:
   m_ObjectHideFlags: 0

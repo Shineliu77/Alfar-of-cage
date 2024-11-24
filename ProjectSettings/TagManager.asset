@@ -12,6 +12,8 @@ TagManager:
   - Enemy
   - DeadZone
   - Gear
+  - GroundWater
+  - FallingWater
   layers:
   - Default
   - TransparentFX
