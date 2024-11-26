@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameOverManager : MonoBehaviour
 {
     public GameObject gameOverPanel; // 參考 Game Over 的 Panel
-    public float delayBeforeGameOver = 1f; // 延遲時間
+    public float delayBeforeGameOver = 0.5f; // 延遲時間
 
     void Start()
     {
