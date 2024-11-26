@@ -6,64 +6,57 @@ using UnityEngine;
 
 public class WeatherSkill : MonoBehaviour
 {
-    public GameObject icePrefab;     // 結冰後的物件預製物件
-    public float freezeRange = 5f;   // 技能範圍（單位：Unity單位）
+    public float skillRadius = 5f;                 // 技能範圍半徑
+    public LayerMask waterLayer;                   // 水層
+    public GameObject icePrefab;                   // 冰塊預製物件（用於地面水）
+    public GameObject hailPrefab;                  // 冰雹預製物件（用於滴落水）
+    public float hailDamage = 5f;                  // 冰雹造成的傷害
 
     void Update()
     {
-        // 按下 Q 鍵使用技能
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q))  // 按 Q 施放技能
         {
-            UseSkill();
+            FreezeWaterInRange();
         }
     }
 
-    void UseSkill()
+    void FreezeWaterInRange()
     {
-        Debug.Log("角色技能啟動：結冰範圍內的水！");
-        FreezeAllWaterInRange();
-    }
+        // 取得角色位置，並檢查範圍內所有的水
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, skillRadius, waterLayer);
 
-    void FreezeAllWaterInRange()
-    {
-        // 找到場景中的所有 GroundWater
-        GameObject[] groundWaters = GameObject.FindGameObjectsWithTag("GroundWater");
-        foreach (GameObject water in groundWaters)
+        foreach (Collider2D hitCollider in hitColliders)
         {
-            if (IsWithinRange(water.transform.position))
+            // 如果是地面上的水
+            if (hitCollider.CompareTag("GroundWater"))
             {
-                FreezeGroundWater(water);
+                FreezeGroundWater(hitCollider);
             }
-        }
-
-        // 找到場景中的所有 FallingWater
-        GameObject[] fallingWaters = GameObject.FindGameObjectsWithTag("FallingWater");
-        foreach (GameObject water in fallingWaters)
-        {
-            if (IsWithinRange(water.transform.position))
+            // 如果是滴落的水
+            else if (hitCollider.CompareTag("FallingWater"))
             {
-                FreezeFallingWater(water);
+                FreezeFallingWater(hitCollider);
             }
         }
     }
 
-    bool IsWithinRange(Vector3 position)
+    void FreezeGroundWater(Collider2D groundWater)
     {
-        // 檢查目標位置是否在範圍內
-        return Vector3.Distance(transform.position, position) <= freezeRange;
+        // 隱藏地面水，並顯示冰塊
+        groundWater.gameObject.SetActive(false);
+        GameObject ice = Instantiate(icePrefab, groundWater.transform.position, Quaternion.identity);
+        ice.transform.localScale = groundWater.transform.localScale;  // 設定冰塊大小與水相同
     }
 
-    void FreezeGroundWater(GameObject water)
+    void FreezeFallingWater(Collider2D fallingWater)
     {
-        // 替換為冰塊
-        Instantiate(icePrefab, water.transform.position, Quaternion.identity);
-        Destroy(water); // 刪除水
-    }
+        // 隱藏滴落水，並顯示冰雹
+        fallingWater.gameObject.SetActive(false);
+        GameObject hail = Instantiate(hailPrefab, fallingWater.transform.position, Quaternion.identity);
+        hail.transform.localScale = fallingWater.transform.localScale;  // 設定冰雹大小與滴水相同
 
-    void FreezeFallingWater(GameObject water)
-    {
-        // 替換為冰塊
-        Instantiate(icePrefab, water.transform.position, Quaternion.identity);
-        Destroy(water); // 刪除水
+        // 為冰雹添加對敵人傷害的邏輯
+        HailDamage hailDamageScript = hail.AddComponent<HailDamage>();
+        hailDamageScript.SetDamage(hailDamage);
     }
 }

@@ -9,6 +9,9 @@ public class GameOverManager : MonoBehaviour
     public GameObject gameOverPanel; // 參考 Game Over 的 Panel
     public float delayBeforeGameOver = 0.5f; // 延遲時間
 
+    [Header("UI 控制")]
+    public GameObject[] uiElementsToDisable; // 要關閉的 UI 元素（例如血條、控制按鈕等）
+
     void Start()
     {
         // 隱藏 Game Over 面板
@@ -17,6 +20,12 @@ public class GameOverManager : MonoBehaviour
 
     public void ShowGameOver()
     {
+        // 隱藏遊戲 UI（例如血條和控制介面）
+        foreach (var uiElement in uiElementsToDisable)
+        {
+            uiElement.SetActive(false);
+        }
+
         // 延遲顯示 Game Over 畫面
         Invoke("DisplayGameOver", delayBeforeGameOver);
     }

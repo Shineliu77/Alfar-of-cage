@@ -22,5 +22,6 @@ public class TimelineCheck : MonoBehaviour
             DialogueObj.SetActive(true);
             AniObj.SetActive(false);
         }
+
     }
 }

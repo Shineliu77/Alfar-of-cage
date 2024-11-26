@@ -21,6 +21,7 @@ public class PlayerControl : MonoBehaviour
     private bool isJump;
     private bool isGround;
 
+
     private void Awake()  //在遊戲開始時第一個啟動
     {
         input = new InputControl();

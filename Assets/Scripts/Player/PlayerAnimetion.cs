@@ -11,6 +11,7 @@ public class PlayerAnimetion : MonoBehaviour
     public bool IsJump;
     [SerializeField]private Animator Skill;
 
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
