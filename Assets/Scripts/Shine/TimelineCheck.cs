@@ -18,7 +18,8 @@ public class TimelineCheck : MonoBehaviour
     }
     private void Update()
     {
-        if (director.time >= SetTime) {
+        if (director.time >= SetTime)
+        {
             DialogueObj.SetActive(true);
             AniObj.SetActive(false);
         }

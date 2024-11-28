@@ -156,7 +156,7 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    private void Die()
+    public void Die()
     {
         // 玩家死亡處理邏輯，比如重新開始遊戲或顯示死亡畫面
         Debug.Log("Player Died");

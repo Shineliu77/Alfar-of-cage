@@ -1,25 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Pausemenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
 
+ 
+    public Color normalColor = Color.white;
+    public Color hoverColor = Color.gray;
 
-    // Update is called once per frame
+   
+    public Text[] buttonTexts;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (GameIsPaused) 
+            if (GameIsPaused)
             {
                 Resume();
             }
-            else 
+            else
             {
                 Pause();
             }
@@ -45,11 +48,21 @@ public class Pausemenu : MonoBehaviour
         GameIsPaused = false;
         Time.timeScale = 1.0f;
         SceneManager.LoadScene("Menu");
-
     }
 
     public void Quit()
     {
-    Application.Quit();
+        Application.Quit();
+    }
+
+    
+    public void OnHoverEnter(Text buttonText)
+    {
+        buttonText.color = hoverColor;
+    }
+
+    public void OnHoverExit(Text buttonText)
+    {
+        buttonText.color = normalColor;
     }
 }
