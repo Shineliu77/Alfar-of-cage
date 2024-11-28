@@ -12,6 +12,8 @@ public class BossController : MonoBehaviour
     public float knockbackForce = 5f; // 撞擊時給玩家的擊退力
     public Transform player;
     public Transform[] movePoints;   // 定義移動點
+    private int currentMovePointIndex = 0;  // 追蹤當前目標點的索引
+
 
     private float lastAttackTime = 0f;
     private Rigidbody2D rb;
@@ -38,45 +40,32 @@ public class BossController : MonoBehaviour
     {
         if (movePoints.Length > 0)
         {
-            // 假設 BOSS 會在移動點之間循環移動
-            // 這裡可以加入邏輯，讓 BOSS 往每個移動點移動
-        }
-    }
+            float distanceToTarget = Vector2.Distance(transform.position, movePoints[currentMovePointIndex].position);
 
-    void AttackPlayer()
-    {
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+            // 移動到目標點
+            transform.position = Vector2.MoveTowards(transform.position, movePoints[currentMovePointIndex].position, chaseSpeed * Time.deltaTime);
 
-        if (distanceToPlayer < detectionRange && Time.time - lastAttackTime >= attackCooldown)
-        {
-            // 計算傷害
-            float impactSpeed = rb.velocity.magnitude;
-            int damage = Mathf.Clamp((int)(baseDamage * impactSpeed), baseDamage, maxDamage);
-
-            // 對玩家造成傷害並施加擊退
-            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
+            // 當 BOSS 到達目標點後，切換到下一個移動點
+            if (distanceToTarget < 0.1f) // 判斷是否到達目標點
             {
-                playerHealth.TakeDamage(damage);
+                // 切換到下一個點
+                currentMovePointIndex = (currentMovePointIndex + 1) % movePoints.Length;  // 循環移動點
             }
-
-            lastAttackTime = Time.time;
         }
     }
 
-    // 撞擊 BOSS 受到傷害
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
+        void AttackPlayer()
         {
-            if (Time.time - lastAttackTime >= attackCooldown)
+            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+
+            if (distanceToPlayer < detectionRange && Time.time - lastAttackTime >= attackCooldown)
             {
                 // 計算傷害
                 float impactSpeed = rb.velocity.magnitude;
                 int damage = Mathf.Clamp((int)(baseDamage * impactSpeed), baseDamage, maxDamage);
 
-                // 對玩家造成傷害
-                PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+                // 對玩家造成傷害並施加擊退
+                PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
                 if (playerHealth != null)
                 {
                     playerHealth.TakeDamage(damage);
@@ -85,15 +74,38 @@ public class BossController : MonoBehaviour
                 lastAttackTime = Time.time;
             }
         }
-    }
 
-    public void TakeDamage(int damage)
-    {
-        if (bossHealth != null)
+        // 撞擊 BOSS 受到傷害
+        void OnCollisionEnter2D(Collision2D collision)
         {
-            bossHealth.TakeDamage(damage); // 在 BossHealth 腳本中處理傷害
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                if (Time.time - lastAttackTime >= attackCooldown)
+                {
+                    // 計算傷害
+                    float impactSpeed = rb.velocity.magnitude;
+                    int damage = Mathf.Clamp((int)(baseDamage * impactSpeed), baseDamage, maxDamage);
+
+                    // 對玩家造成傷害
+                    PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+                    if (playerHealth != null)
+                    {
+                        playerHealth.TakeDamage(damage);
+                    }
+
+                    lastAttackTime = Time.time;
+                }
+            }
+        }
+
+        public void TakeDamage(int damage)
+        {
+            if (bossHealth != null)
+            {
+                bossHealth.TakeDamage(damage);
+            }
         }
     }
-}
 
 
+  
