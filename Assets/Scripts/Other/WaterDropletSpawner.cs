@@ -24,5 +24,7 @@ public class WaterDropletSpawner : MonoBehaviour
         GameObject waterDroplet = Instantiate(fallingWaterPrefab, spawnPoint.position, Quaternion.identity);
         waterDroplet.tag = "FallingWater";  // 設置標籤
         waterDroplet.layer = LayerMask.NameToLayer("WaterLayer");  // 設置層為 WaterLayer
+        waterDroplet.transform.position = new Vector3(spawnPoint.transform.position.x, spawnPoint.transform.position.y, 0);
+
     }
 }

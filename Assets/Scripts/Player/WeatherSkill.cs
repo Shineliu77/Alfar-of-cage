@@ -44,6 +44,7 @@ public class WeatherSkill : MonoBehaviour
         groundWater.gameObject.SetActive(false);
         GameObject ice = Instantiate(icePrefab, groundWater.transform.position, Quaternion.identity);
         ice.transform.localScale = groundWater.transform.localScale; // 設定冰塊大小與水相同
+        ice.transform.position = new Vector3(groundWater.transform.position.x, groundWater.transform.position.y, 0);
     }
 
     void FreezeFallingWater(Collider2D fallingWater)
@@ -52,6 +53,7 @@ public class WeatherSkill : MonoBehaviour
         fallingWater.gameObject.SetActive(false);
         GameObject hail = Instantiate(hailPrefab, fallingWater.transform.position, Quaternion.identity);
         hail.transform.localScale = fallingWater.transform.localScale; // 設定冰雹大小與滴水相同
+        hail.transform.position = new Vector3(fallingWater.transform.position.x, fallingWater.transform.position.y, 0);
 
         // 為冰雹添加對敵人傷害的邏輯
         HailDamage hailDamageScript = hail.AddComponent<HailDamage>();

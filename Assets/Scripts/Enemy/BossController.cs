@@ -58,12 +58,11 @@ public class BossController : MonoBehaviour
         {
             float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-            if (distanceToPlayer < detectionRange && Time.time - lastAttackTime >= attackCooldown)
+        if (distanceToPlayer < detectionRange && Time.time - lastAttackTime >= attackCooldown)
             {
                 // 計算傷害
                 float impactSpeed = rb.velocity.magnitude;
                 int damage = Mathf.Clamp((int)(baseDamage * impactSpeed), baseDamage, maxDamage);
-
                 // 對玩家造成傷害並施加擊退
                 PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
                 if (playerHealth != null)
