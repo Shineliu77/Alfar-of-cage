@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class CharacterSwitch : MonoBehaviour
 {
@@ -33,5 +34,7 @@ public class CharacterSwitch : MonoBehaviour
 
         // 顯示選中的角色
         characters[index].SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+
     }
 }
