@@ -20,6 +20,9 @@ TextureImporter:
   - first:
       213: 4725984047741914287
     second: "\u52D5\u756B\u7B2C\u4E00\u95DCboss_5"
+  - first:
+      213: -1420002017880433320
+    second: "\u52D5\u756B\u7B2C\u4E00\u95DCboss_6"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +67,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 70
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,6 +132,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -136,12 +151,12 @@ TextureImporter:
       name: "\u52D5\u756B\u7B2C\u4E00\u95DCboss_0"
       rect:
         serializedVersion: 2
-        x: 173
-        y: 179
-        width: 966
-        height: 706
+        x: 193
+        y: 178
+        width: 936
+        height: 1015
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,12 +172,12 @@ TextureImporter:
       name: "\u52D5\u756B\u7B2C\u4E00\u95DCboss_1"
       rect:
         serializedVersion: 2
-        x: 1360
-        y: 187
-        width: 1032
-        height: 796
+        x: 1391
+        y: 178
+        width: 975
+        height: 1015
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -178,12 +193,12 @@ TextureImporter:
       name: "\u52D5\u756B\u7B2C\u4E00\u95DCboss_2"
       rect:
         serializedVersion: 2
-        x: 2515
-        y: 161
-        width: 1011
-        height: 939
+        x: 2526
+        y: 178
+        width: 991
+        height: 1015
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -199,12 +214,12 @@ TextureImporter:
       name: "\u52D5\u756B\u7B2C\u4E00\u95DCboss_3"
       rect:
         serializedVersion: 2
-        x: 3732
-        y: 165
-        width: 1001
-        height: 1038
+        x: 3747
+        y: 0
+        width: 964
+        height: 1200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,12 +235,12 @@ TextureImporter:
       name: "\u52D5\u756B\u7B2C\u4E00\u95DCboss_4"
       rect:
         serializedVersion: 2
-        x: 5071
-        y: 144
-        width: 1085
-        height: 1003
+        x: 5089
+        y: 178
+        width: 1042
+        height: 1015
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -241,12 +256,12 @@ TextureImporter:
       name: "\u52D5\u756B\u7B2C\u4E00\u95DCboss_5"
       rect:
         serializedVersion: 2
-        x: 6544
-        y: 171
-        width: 995
-        height: 1060
+        x: 6554
+        y: 178
+        width: 966
+        height: 1015
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,6 +269,27 @@ TextureImporter:
       bones: []
       spriteID: facc1dbb371169140800000000000000
       internalID: 4725984047741914287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u52D5\u756B\u7B2C\u4E00\u95DCboss_6"
+      rect:
+        serializedVersion: 2
+        x: 2020
+        y: 164
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d16ef20b32b4ce0800000000000000
+      internalID: -1420002017880433320
       vertices: []
       indices: 
       edges: []
