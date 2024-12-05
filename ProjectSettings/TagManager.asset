@@ -17,6 +17,7 @@ TagManager:
   - FxTemporaire
   - Laser
   - Ladder
+  - IICE
   layers:
   - Default
   - TransparentFX

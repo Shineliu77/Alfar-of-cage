@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 5461905255280741538}
   - component: {fileID: 1806638436524468895}
   - component: {fileID: 2851200391511969063}
+  - component: {fileID: 6528449097965627705}
   m_Layer: 0
   m_Name: player_Weather
   m_TagString: Untagged
@@ -308,6 +309,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6528449097965627705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2152268519923371227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee72441fe9f36164a85e41304f0d8a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillRadius: 5
+  waterLayer:
+    serializedVersion: 2
+    m_Bits: 16
+  icePrefab: {fileID: 2033759675519717579, guid: 26b9a95de4803524089ee2c421abfc3c, type: 3}
+  hailPrefab: {fileID: 8898610686977420234, guid: cbb27c8755de6454790f6e7efab3b088, type: 3}
+  hailDamage: 10
 --- !u!1 &2415374018019836380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,10 +1227,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 100
+  maxHealth: 100
+  healthSlider: {fileID: 0}
+  knockbackDistance: 2
+  knockbackTime: 0.2
+  damageAudio: {fileID: 0}
   control: {fileID: 5838105465604780408}
-  audioSource: {fileID: 0}
-  distance: 5
-  time: 0.3
 --- !u!114 &2649445021244466017
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,12 +9,14 @@ public class WeatherSkill : MonoBehaviour
     public GameObject icePrefab; // 冰塊預製物件（用於地面水）
     public GameObject hailPrefab; // 冰雹預製物件（用於滴落水）
     public float hailDamage = 5f; // 冰雹造成的傷害
+    public string targetTag = "TargetObject"; // 指定物件的標籤
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q)) // 按 Q 施放技能
         {
             FreezeWaterInRange();
+            DisableTargetsInRange();
         }
     }
 
@@ -38,6 +40,21 @@ public class WeatherSkill : MonoBehaviour
         }
     }
 
+    void DisableTargetsInRange()
+    {
+        // 檢測範圍內所有碰撞體
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, skillRadius);
+
+        foreach (Collider2D hitCollider in hitColliders)
+        {
+            // 如果碰撞到的是指定的物件，則關閉該物件
+            if (hitCollider.CompareTag(targetTag))
+            {
+                hitCollider.gameObject.SetActive(false);
+            }
+        }
+    }
+
     void FreezeGroundWater(Collider2D groundWater)
     {
         // 隱藏地面水，並顯示冰塊
@@ -49,16 +66,15 @@ public class WeatherSkill : MonoBehaviour
 
     void FreezeFallingWater(Collider2D fallingWater)
     {
-        // 隱藏滴落水，並顯示冰雹
         fallingWater.gameObject.SetActive(false);
         GameObject hail = Instantiate(hailPrefab, fallingWater.transform.position, Quaternion.identity);
-        hail.transform.localScale = fallingWater.transform.localScale; // 設定冰雹大小與滴水相同
+
+        // 固定冰雹的大小為 (0.1, 0.1, 1)
+        hail.transform.localScale = new Vector3(0.1f, 0.1f, 1);
         hail.transform.position = new Vector3(fallingWater.transform.position.x, fallingWater.transform.position.y, 0);
 
         // 為冰雹添加對敵人傷害的邏輯
         HailDamage hailDamageScript = hail.AddComponent<HailDamage>();
         hailDamageScript.SetDamage(hailDamage);
     }
-
-  
 }

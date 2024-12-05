@@ -892,8 +892,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 65101291b2611b343a47cb2f394800e7, type: 3}
-    m_FontSize: 85
+    m_Font: {fileID: 12800000, guid: 2cf732d40f2a16f46b45d38d78bc0a9f, type: 3}
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -15271,7 +15271,7 @@ MonoBehaviour:
   Dialogues:
   - "\u986F\u793A\u4E0D\u51FA\u4F86"
   - "\u600E\u9EBC\u6703......"
-  - "\u9023\u6211\u4E5F\u7121\u6CD5\u9003\u96E2\u5973\u5DEB\u7684\u624B\u638C\u5FC3\u4E86\u5417......"
+  - "\u9023\u6211\u4E5F\u7121\u6CD5\u9003\u96E2\u5973\u5DEB\u7684\u624B\u638C\u5FC3\u4E86\u55CE......"
   DialogueText: {fileID: 63409866}
   NextObj: {fileID: 0}
   Player: {fileID: 0}
