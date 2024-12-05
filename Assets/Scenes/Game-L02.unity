@@ -9192,7 +9192,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3806683394990511477, guid: 0dc6d5c834d52784395b396e4f3ece5f, type: 3}
+  m_Sprite: {fileID: -1787181115031518843, guid: 0dc6d5c834d52784395b396e4f3ece5f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12390,7 +12390,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u67EF\u7F85\u8AFE\u65AF"
+  m_Text: "\u5E03\u9E97\u838E"
 --- !u!222 &1234685979
 CanvasRenderer:
   m_ObjectHideFlags: 0
