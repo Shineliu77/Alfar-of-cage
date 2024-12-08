@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 public class OnlyDialogue : MonoBehaviour
@@ -78,20 +77,30 @@ public class OnlyDialogue : MonoBehaviour
         UpdateCharacterName(i); // 更新角色名稱
     }
 
-    // ��s�����ø�Ϯת���k
+    // 更新角色立繪圖案的方法
     void UpdateCharacterImage(int index)
     {
         if (CharacterSprites.Length > index && CharacterImage != null)
         {
-            CharacterImage.sprite = CharacterSprites[index]; // �ھڹ�ܯ��ޤ��������ø
+            CharacterImage.sprite = CharacterSprites[index]; // 根據對話索引切換角色立繪
         }
     }
 
+    // 更新標籤圖片的方法
     void UpdateTAGImage(int index)
     {
         if (TAGSprites.Length > index && TAGImage != null)
         {
-            TAGImage.sprite = TAGSprites[index]; // �ھڹ�ܯ��ޤ��������ø
+            TAGImage.sprite = TAGSprites[index]; // 根據對話索引切換標籤圖片
+        }
+    }
+
+    // 新增：更新角色名稱的方法
+    void UpdateCharacterName(int index)
+    {
+        if (CharacterNames.Length > index && CharacterNameText != null)
+        {
+            CharacterNameText.text = CharacterNames[index]; // 根據對話索引切換角色名稱
         }
     }
 }

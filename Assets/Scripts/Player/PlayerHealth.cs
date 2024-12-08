@@ -26,6 +26,10 @@ public class PlayerHealth : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private PlayerControl control;
 
+    [Header("碰撞傷害設定")]
+    public string damageTag = "tree"; // 碰撞時會造成傷害的標籤
+    public int collisionDamage = 10; // 碰撞傷害數值
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -51,6 +55,15 @@ public class PlayerHealth : MonoBehaviour
                 isKnockback = false;
                 timer = 0;
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // 檢查是否碰到指定標籤的物件
+        if (collision.CompareTag(damageTag))
+        {
+            TakeDamage(collisionDamage);
         }
     }
 

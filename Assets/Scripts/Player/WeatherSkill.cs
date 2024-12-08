@@ -10,6 +10,8 @@ public class WeatherSkill : MonoBehaviour
     public GameObject hailPrefab; // 冰雹預製物件（用於滴落水）
     public float hailDamage = 5f; // 冰雹造成的傷害
     public string targetTag = "TargetObject"; // 指定物件的標籤
+    public string treeTag = "tree"; // 樹的標籤
+    public string iceTreeTag = "Ground"; // 冰樹的標籤
 
     private void Update()
     {
@@ -17,6 +19,7 @@ public class WeatherSkill : MonoBehaviour
         {
             FreezeWaterInRange();
             DisableTargetsInRange();
+            ConvertTreesInRange();
         }
     }
 
@@ -54,6 +57,46 @@ public class WeatherSkill : MonoBehaviour
             }
         }
     }
+
+    void ConvertTreesInRange()
+    {
+        // 檢測範圍內所有碰撞體
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, skillRadius);
+
+        foreach (Collider2D hitCollider in hitColliders)
+        {
+            // 如果碰撞到的是樹（tree），則關閉它並嘗試啟用對應的冰樹（icetree）
+            if (hitCollider.CompareTag(treeTag))
+            {
+                // 只在樹物件仍然啟用時禁用它
+                if (hitCollider.gameObject.activeSelf)
+                {
+                    Debug.Log($"Disabling tree: {hitCollider.name}");
+                    hitCollider.gameObject.SetActive(false);
+
+                    // 查找與 tree 同位置的 icetree
+                    Transform parentTransform = hitCollider.transform.parent;
+                    if (parentTransform != null)
+                    {
+                        foreach (Transform child in parentTransform)
+                        {
+                            if (child.CompareTag(iceTreeTag))
+                            {
+                                // 確保冰樹物件被啟用
+                                if (!child.gameObject.activeSelf)
+                                {
+                                    Debug.Log($"Enabling ice tree: {child.name}");
+                                    child.gameObject.SetActive(true);
+                                }
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 
     void FreezeGroundWater(Collider2D groundWater)
     {

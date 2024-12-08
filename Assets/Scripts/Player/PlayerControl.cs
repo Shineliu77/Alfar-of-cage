@@ -168,7 +168,7 @@ public class PlayerControl : MonoBehaviour
     private void FlashRed()
     {
         spriteRenderer.color = Color.white;
-        spriteRenderer.DOColor(Color.red, 1f).SetLoops(6, LoopType.Yoyo);
+        spriteRenderer.DOColor(Color.red, 1f).SetLoops(4, LoopType.Yoyo);
         Debug.Log("Player");
 
     }

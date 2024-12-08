@@ -1481,6 +1481,8 @@ MonoBehaviour:
   hailPrefab: {fileID: 8898610686977420234, guid: cbb27c8755de6454790f6e7efab3b088, type: 3}
   hailDamage: 5
   targetTag: TargetObject
+  treeTag: tree
+  iceTreeTag: Ground
 --- !u!1 &85404504
 GameObject:
   m_ObjectHideFlags: 0
@@ -3977,7 +3979,7 @@ MonoBehaviour:
   - "\u6B7B\u53BB\u7684\u7CBE\u9748?!"
   - "\u4ED6\u5011\u770B\u8D77\u4F86\u6709\u9EDE\u6B98\u66B4"
   - "\u88AB\u4ED6\u5011\u649E\u5230\u7684\u8A71\u61C9\u8A72\u5F88\u75DB"
-  - "<color=blue>\u5982\u679C\u4F7F\u7528\u300C\u6642\u9593\u66AB\u505C\u300D\u80FD\u529B\u7684\u8A71\u22EF\u22EF</color>"
+  - "\u5982\u679C\u4F7F\u7528<color=blue>\u6642\u9593\u66AB\u505C</color>\u80FD\u529B\u7684\u8A71\u22EF\u22EF"
   DialogueText: {fileID: 607962184}
   NextObjs:
   - {fileID: 80747651}
@@ -3985,6 +3987,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   Player: {fileID: 901667709}
+  CharacterImage: {fileID: 0}
+  TAGImage: {fileID: 0}
+  CharacterSprites: []
+  TAGSprites: []
+  CharacterNameText: {fileID: 0}
+  CharacterNames: []
 --- !u!114 &240657023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5710,7 +5718,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 656, y: -534}
-  m_SizeDelta: {x: 313.3643, y: 473.8734}
+  m_SizeDelta: {x: 321.25, y: 473.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &368881962
 MonoBehaviour:
@@ -6173,6 +6181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogues:
   - ......?
+  - "\u90A3\u500B\u5F71\u5B50\u662F......?"
   DialogueText: {fileID: 2078311443}
   NextObjs:
   - {fileID: 80747651}
@@ -6180,6 +6189,12 @@ MonoBehaviour:
   - {fileID: 366650685}
   - {fileID: 0}
   Player: {fileID: 901667709}
+  CharacterImage: {fileID: 0}
+  TAGImage: {fileID: 0}
+  CharacterSprites: []
+  TAGSprites: []
+  CharacterNameText: {fileID: 0}
+  CharacterNames: []
 --- !u!114 &395276127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15564,6 +15579,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   Player: {fileID: 901667709}
+  CharacterImage: {fileID: 0}
+  TAGImage: {fileID: 0}
+  CharacterSprites: []
+  TAGSprites: []
+  CharacterNameText: {fileID: 0}
+  CharacterNames: []
 --- !u!114 &1096157177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18950,11 +18971,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1980904067464219072, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 530.1478
+      value: 178.07779
       objectReference: {fileID: 0}
     - target: {fileID: 1980904067464219072, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -39.25
+      value: -40.56
       objectReference: {fileID: 0}
     - target: {fileID: 1980904067464219072, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19248,6 +19269,10 @@ PrefabInstance:
       propertyPath: buttonTexts.Array.data[4]
       value: 
       objectReference: {fileID: 123795135}
+    - target: {fileID: 4991815746525818315, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5156608024493490802, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
       propertyPath: m_Size.x
       value: 0.9766666
@@ -19338,11 +19363,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5669601226910305329, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 523.89
+      value: 171.82
       objectReference: {fileID: 0}
     - target: {fileID: 5669601226910305329, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -40.05
+      value: -41.36
       objectReference: {fileID: 0}
     - target: {fileID: 5924482954560212673, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
       propertyPath: PL
@@ -19490,11 +19515,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8448099182944524724, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 530.1478
+      value: 178.07779
       objectReference: {fileID: 0}
     - target: {fileID: 8448099182944524724, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -39.25
+      value: -40.56
       objectReference: {fileID: 0}
     - target: {fileID: 8448099182944524724, guid: 7f096899f35ad41a3ba6ba93d8e146d1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21497,7 +21522,7 @@ MonoBehaviour:
   Dialogues:
   - "\u5225\u78B0\u5230\u6BD4\u8F03\u597D\u3002"
   - "\u8D81\u82B1\u74E3\u64CB\u4F4F\u773C\u775B\u6642\u8D95\u7DCA\u901A\u904E\u3002"
-  - "<color=blue>\u5982\u679C\u4F7F\u7528\u300C\u6642\u9593\u56DE\u6714\u300D\u8B93\u4ED6\u8B8A\u56DE\u82B1\u82DE\u6642\u7684\u6A23\u5B50\u22EF\u22EF</color>"
+  - "\u5982\u679C\u4F7F\u7528<color=blue>\u6642\u9593\u56DE\u6714</color>\u8B93\u4ED6\u8B8A\u56DE\u82B1\u82DE\u6642\u7684\u6A23\u5B50\u22EF\u22EF"
   DialogueText: {fileID: 443057476}
   NextObjs:
   - {fileID: 80747651}
@@ -21505,6 +21530,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   Player: {fileID: 901667709}
+  CharacterImage: {fileID: 0}
+  TAGImage: {fileID: 0}
+  CharacterSprites: []
+  TAGSprites: []
+  CharacterNameText: {fileID: 0}
+  CharacterNames: []
 --- !u!114 &1586142426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27367,7 +27398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogues:
   - "\u5E73\u53F0\u4E00\u76F4\u5728\u8B8A\u63DB\u4F4D\u7F6E.......\u6709\u9EDE\u7169\u3002"
-  - "<color=blue>\u5982\u679C\u4F7F\u7528\u300C\u6642\u9593\u66AB\u505C\u300D\u80FD\u529B\u7684\u8A71\u22EF\u22EF</color>"
+  - "\u5982\u679C\u4F7F\u7528<color=blue>\u6642\u9593\u66AB\u505C</color>\u80FD\u529B\u7684\u8A71\u22EF\u22EF"
   DialogueText: {fileID: 569735457}
   NextObjs:
   - {fileID: 80747651}
@@ -27375,6 +27406,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   Player: {fileID: 901667709}
+  CharacterImage: {fileID: 0}
+  TAGImage: {fileID: 0}
+  CharacterSprites: []
+  TAGSprites: []
+  CharacterNameText: {fileID: 0}
+  CharacterNames: []
 --- !u!114 &1971601687
 MonoBehaviour:
   m_ObjectHideFlags: 0

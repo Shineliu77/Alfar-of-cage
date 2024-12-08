@@ -18,6 +18,8 @@ TagManager:
   - Laser
   - Ladder
   - IICE
+  - tree
+  - icetree
   layers:
   - Default
   - TransparentFX
