@@ -7,7 +7,7 @@ public class PlayerSoundController : MonoBehaviour
     [Header("音效設置")]
     public AudioClip walkSound; // 走路音效
     public AudioClip jumpSound; // 跳躍音效
-    public AudioClip skillSound; // 技能音效
+ 
     public float walkSoundInterval = 0.3f; // 走路音效間隔
 
     private AudioSource audioSource;
@@ -59,11 +59,6 @@ public class PlayerSoundController : MonoBehaviour
             PlaySoundInterrupt(jumpSound);
         }
 
-        // 按 Q 播放技能音效
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            PlaySoundInterrupt(skillSound);
-        }
     }
 
     private void PlaySoundInterrupt(AudioClip clip)

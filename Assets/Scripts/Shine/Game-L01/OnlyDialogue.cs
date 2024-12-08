@@ -1,20 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 public class OnlyDialogue : MonoBehaviour
 {
     public string[] Dialogues;          // 對話內容
     private int i = 0;                  // 當前對話索引
-    public Text DialogueText;           // 對話顯示文字元件
+    public Text DialogueText;           // 用於顯示對話文字的 UI Text 元件
+
     public GameObject[] NextObjs;       // 需要啟用的多個物件陣列
-    public GameObject Player;           // Player 物件 (用於找到 PlayerControl 腳本)
+    public GameObject Player;           // Player 物件 (用來取得 PlayerControl 腳本)
     private PlayerControl playerControl; // 引用 PlayerControl 腳本
+    public Image CharacterImage;        // 用於顯示角色立繪的 UI Image 元件
+    public Image TAGImage;
+    public Sprite[] CharacterSprites;   // 存儲每個對話對應的角色立繪圖片
+    public Sprite[] TAGSprites;
 
     void Start()
     {
-        // 確保 Player 不為 null 並取得 PlayerControl 腳本
+        // 確保 Player 物件不為 null，並取得 PlayerControl 腳本
         if (Player != null)
         {
             playerControl = Player.GetComponent<PlayerControl>();
@@ -26,27 +32,29 @@ public class OnlyDialogue : MonoBehaviour
 
         if (Dialogues.Length > 0)
         {
-            DialogueText.text = Dialogues[0]; // 初始化第一句對話
+            DialogueText.text = Dialogues[0]; // 顯示第一句對話
+            UpdateCharacterImage(0); // 顯示對應的角色立繪
+            UpdateTAGImage(0);
         }
     }
 
     public void ClickNext()
     {
-        i++;
+        i++; // 前進到下一句對話
         if (i >= Dialogues.Length)
         {
-            gameObject.SetActive(false);
+            gameObject.SetActive(false); // 隱藏對話框
 
-            // 一次啟用陣列中的所有物件
+            // 啟用陣列中的所有物件
             foreach (GameObject obj in NextObjs)
             {
                 if (obj != null)
                 {
-                    obj.SetActive(true); // 啟用每個設置的物件
+                    obj.SetActive(true); // 啟用每個物件
                 }
             }
 
-            // 對話結束時啟用 PlayerControl 腳本
+            // 對話結束後，重新啟用 PlayerControl
             if (playerControl != null)
             {
                 playerControl.enabled = true;
@@ -55,7 +63,30 @@ public class OnlyDialogue : MonoBehaviour
             return; // 避免執行後續程式碼
         }
 
-        i = Mathf.Clamp(i, 0, Dialogues.Length - 1); // 確保索引在合法範圍內
-        DialogueText.text = Dialogues[i];           // 更新顯示文字
+        // 確保索引在合法範圍內
+        i = Mathf.Clamp(i, 0, Dialogues.Length - 1);
+        DialogueText.text = Dialogues[i]; // 更新顯示的對話
+
+        // 更新角色立繪圖片
+        UpdateCharacterImage(i);
+        UpdateTAGImage(i);
+
+    }
+
+    // 更新角色立繪圖案的方法
+    void UpdateCharacterImage(int index)
+    {
+        if (CharacterSprites.Length > index && CharacterImage != null)
+        {
+            CharacterImage.sprite = CharacterSprites[index]; // 根據對話索引切換角色立繪
+        }
+    }
+
+    void UpdateTAGImage(int index)
+    {
+        if (TAGSprites.Length > index && TAGImage != null)
+        {
+            TAGImage.sprite = TAGSprites[index]; // 根據對話索引切換角色立繪
+        }
     }
 }
