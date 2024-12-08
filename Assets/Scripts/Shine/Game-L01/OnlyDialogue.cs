@@ -6,79 +6,84 @@ using UnityEngine.UI;
 
 public class OnlyDialogue : MonoBehaviour
 {
-    public string[] Dialogues;          // ¹ï¸Ü¤º®e
-    private int i = 0;                  // ·í«e¹ï¸Ü¯Á¤Ş
-    public Text DialogueText;           // ¥Î©óÅã¥Ü¹ï¸Ü¤å¦rªº UI Text ¤¸¥ó
+    public string[] Dialogues;          // å°è©±å…§å®¹
+    private int i = 0;                  // ç•¶å‰å°è©±ç´¢å¼•
+    public Text DialogueText;           // ç”¨æ–¼é¡¯ç¤ºå°è©±æ–‡å­—çš„ UI Text å…ƒä»¶
 
-    public GameObject[] NextObjs;       // »İ­n±Ò¥Îªº¦h­Óª«¥ó°}¦C
-    public GameObject Player;           // Player ª«¥ó (¥Î¨Ó¨ú±o PlayerControl ¸}¥»)
-    private PlayerControl playerControl; // ¤Ş¥Î PlayerControl ¸}¥»
-    public Image CharacterImage;        // ¥Î©óÅã¥Ü¨¤¦â¥ßÃ¸ªº UI Image ¤¸¥ó
+    public GameObject[] NextObjs;       // éœ€è¦å•Ÿç”¨çš„å¤šå€‹ç‰©ä»¶é™£åˆ—
+    public GameObject Player;           // Player ç‰©ä»¶ (ç”¨ä¾†å–å¾— PlayerControl è…³æœ¬)
+    private PlayerControl playerControl; // å¼•ç”¨ PlayerControl è…³æœ¬
+    public Image CharacterImage;        // ç”¨æ–¼é¡¯ç¤ºè§’è‰²ç«‹ç¹ªçš„ UI Image å…ƒä»¶
     public Image TAGImage;
-    public Sprite[] CharacterSprites;   // ¦sÀx¨C­Ó¹ï¸Ü¹ïÀ³ªº¨¤¦â¥ßÃ¸¹Ï¤ù
+    public Sprite[] CharacterSprites;   // å­˜å„²æ¯å€‹å°è©±å°æ‡‰çš„è§’è‰²ç«‹ç¹ªåœ–ç‰‡
     public Sprite[] TAGSprites;
+
+    // æ–°å¢ï¼šè§’è‰²åç¨±é¡¯ç¤ºçš„ Text å…ƒä»¶
+    public Text CharacterNameText;      // ç”¨æ–¼é¡¯ç¤ºè§’è‰²åç¨±çš„ UI Text å…ƒä»¶
+    public string[] CharacterNames;     // å­˜å„²æ¯å€‹å°è©±å°æ‡‰çš„è§’è‰²åç¨±
 
     void Start()
     {
-        // ½T«O Player ª«¥ó¤£¬° null¡A¨Ã¨ú±o PlayerControl ¸}¥»
+        // ç¢ºä¿ Player ç‰©ä»¶ä¸ç‚º nullï¼Œä¸¦å–å¾— PlayerControl è…³æœ¬
         if (Player != null)
         {
             playerControl = Player.GetComponent<PlayerControl>();
             if (playerControl != null)
             {
-                playerControl.enabled = false; // ¹CÀ¸¶}©l®É¸T¥Î PlayerControl
+                playerControl.enabled = false; // éŠæˆ²é–‹å§‹æ™‚ç¦ç”¨ PlayerControl
             }
         }
 
         if (Dialogues.Length > 0)
         {
-            DialogueText.text = Dialogues[0]; // Åã¥Ü²Ä¤@¥y¹ï¸Ü
-            UpdateCharacterImage(0); // Åã¥Ü¹ïÀ³ªº¨¤¦â¥ßÃ¸
+            DialogueText.text = Dialogues[0]; // é¡¯ç¤ºç¬¬ä¸€å¥å°è©±
+            UpdateCharacterImage(0); // é¡¯ç¤ºå°æ‡‰çš„è§’è‰²ç«‹ç¹ª
             UpdateTAGImage(0);
+            UpdateCharacterName(0); // é¡¯ç¤ºå°æ‡‰çš„è§’è‰²åç¨±
         }
     }
 
     public void ClickNext()
     {
-        i++; // «e¶i¨ì¤U¤@¥y¹ï¸Ü
+        i++; // å‰é€²åˆ°ä¸‹ä¸€å¥å°è©±
         if (i >= Dialogues.Length)
         {
-            gameObject.SetActive(false); // ÁôÂÃ¹ï¸Ü®Ø
+            gameObject.SetActive(false); // éš±è—å°è©±æ¡†
 
-            // ±Ò¥Î°}¦C¤¤ªº©Ò¦³ª«¥ó
+            // å•Ÿç”¨é™£åˆ—ä¸­çš„æ‰€æœ‰ç‰©ä»¶
             foreach (GameObject obj in NextObjs)
             {
                 if (obj != null)
                 {
-                    obj.SetActive(true); // ±Ò¥Î¨C­Óª«¥ó
+                    obj.SetActive(true); // å•Ÿç”¨æ¯å€‹ç‰©ä»¶
                 }
             }
 
-            // ¹ï¸Üµ²§ô«á¡A­«·s±Ò¥Î PlayerControl
+            // å°è©±çµæŸå¾Œï¼Œé‡æ–°å•Ÿç”¨ PlayerControl
             if (playerControl != null)
             {
                 playerControl.enabled = true;
             }
 
-            return; // Á×§K°õ¦æ«áÄòµ{¦¡½X
+            return; // é¿å…åŸ·è¡Œå¾ŒçºŒç¨‹å¼ç¢¼
         }
 
-        // ½T«O¯Á¤Ş¦b¦Xªk½d³ò¤º
+        // ç¢ºä¿ç´¢å¼•åœ¨åˆæ³•ç¯„åœå…§
         i = Mathf.Clamp(i, 0, Dialogues.Length - 1);
-        DialogueText.text = Dialogues[i]; // §ó·sÅã¥Üªº¹ï¸Ü
+        DialogueText.text = Dialogues[i]; // æ›´æ–°é¡¯ç¤ºçš„å°è©±
 
-        // §ó·s¨¤¦â¥ßÃ¸¹Ï¤ù
+        // æ›´æ–°è§’è‰²ç«‹ç¹ªåœ–ç‰‡
         UpdateCharacterImage(i);
         UpdateTAGImage(i);
-
+        UpdateCharacterName(i); // æ›´æ–°è§’è‰²åç¨±
     }
 
-    // §ó·s¨¤¦â¥ßÃ¸¹Ï®×ªº¤èªk
+    // ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½Ã¸ï¿½Ï®×ªï¿½ï¿½ï¿½k
     void UpdateCharacterImage(int index)
     {
         if (CharacterSprites.Length > index && CharacterImage != null)
         {
-            CharacterImage.sprite = CharacterSprites[index]; // ®Ú¾Ú¹ï¸Ü¯Á¤Ş¤Á´«¨¤¦â¥ßÃ¸
+            CharacterImage.sprite = CharacterSprites[index]; // ï¿½Ú¾Ú¹ï¿½Ü¯ï¿½ï¿½Ş¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¸
         }
     }
 
@@ -86,7 +91,7 @@ public class OnlyDialogue : MonoBehaviour
     {
         if (TAGSprites.Length > index && TAGImage != null)
         {
-            TAGImage.sprite = TAGSprites[index]; // ®Ú¾Ú¹ï¸Ü¯Á¤Ş¤Á´«¨¤¦â¥ßÃ¸
+            TAGImage.sprite = TAGSprites[index]; // ï¿½Ú¾Ú¹ï¿½Ü¯ï¿½ï¿½Ş¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¸
         }
     }
 }
