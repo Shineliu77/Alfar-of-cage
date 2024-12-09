@@ -31,6 +31,9 @@ public class Dialogue : MonoBehaviour
         if (i == Dialogues.Length) // 如果對話顯示完
         {
             DialoguesObj.SetActive(false); // 隱藏對話框
+            if (NextObj != null) {
+                NextObj.SetActive(true);
+            }
             StartCoroutine(CameraShake()); // 開始鏡頭震動
         }
         else
