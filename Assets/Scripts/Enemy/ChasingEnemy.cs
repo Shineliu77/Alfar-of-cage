@@ -22,6 +22,7 @@ public class ChasingEnemy : MonoBehaviour
 
     private bool isReturning = false;
     private Collider2D enemyCollider;
+    private Animator animator; // 新增 Animator 引用
 
     void Start()
     {
@@ -39,6 +40,13 @@ public class ChasingEnemy : MonoBehaviour
 
         // 取得敵人的 Collider
         enemyCollider = GetComponent<Collider2D>();
+
+        // 取得敵人的 Animator
+        animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            Debug.LogWarning("No Animator found on " + gameObject.name);
+        }
     }
 
     void Update()
@@ -52,6 +60,10 @@ public class ChasingEnemy : MonoBehaviour
                 // 重新啟用敵人碰撞體
                 if (enemyCollider != null)
                     enemyCollider.enabled = true;
+
+                // 啟用動畫
+                if (animator != null)
+                    animator.enabled = true;
             }
             return;
         }
@@ -142,6 +154,10 @@ public class ChasingEnemy : MonoBehaviour
         // 當敵人被暫停時，禁用碰撞體，讓玩家可以穿過敵人
         if (enemyCollider != null)
             enemyCollider.enabled = false;
+
+        // 暫停動畫
+        if (animator != null)
+            animator.enabled = false;
     }
 
     void FlipEnemy(float directionX)

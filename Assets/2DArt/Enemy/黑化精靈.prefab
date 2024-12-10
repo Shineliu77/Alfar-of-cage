@@ -84,6 +84,7 @@ GameObject:
   - component: {fileID: 9167246087195494247}
   - component: {fileID: 9167246087195494241}
   - component: {fileID: 7395186472144356283}
+  - component: {fileID: 6286677564019499030}
   m_Layer: 8
   m_Name: Alfar
   m_TagString: Enemy
@@ -196,6 +197,25 @@ MonoBehaviour:
   knockbackForce: 5
   player: {fileID: 2607264290042320674, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
   startingPosition: {fileID: 0}
+--- !u!95 &6286677564019499030
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9167246087195494246}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 34278c31b2e1a964f9f45e30531dd80f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9167246088341682714
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +271,7 @@ Transform:
   m_GameObject: {fileID: 9167246088381496285}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -44.055634, y: -9.068167, z: 66.8027}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 9167246087195494240}
   - {fileID: 9167246088341682715}

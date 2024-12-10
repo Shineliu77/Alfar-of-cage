@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class GameOverManager : MonoBehaviour
 {
@@ -26,8 +25,8 @@ public class GameOverManager : MonoBehaviour
             uiElement.SetActive(false);
         }
 
-        // 延遲顯示 Game Over 畫面
-        Invoke("DisplayGameOver", delayBeforeGameOver);
+      
+        gameOverPanel.SetActive(true);
     }
 
     private void DisplayGameOver()
@@ -35,15 +34,72 @@ public class GameOverManager : MonoBehaviour
         gameOverPanel.SetActive(true);
     }
 
-    public void RestartGame()
+    public void RespawnPlayer()
     {
-        // 重新載入當前場景
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // 根據標籤找到玩家物件
+        GameObject playerObject = GameObject.FindWithTag("Player");
+
+        if (playerObject != null)
+        {
+            // 重新啟用玩家物件的渲染、碰撞和物理
+            SpriteRenderer[] renderers = playerObject.GetComponentsInChildren<SpriteRenderer>();
+            Collider2D[] colliders = playerObject.GetComponentsInChildren<Collider2D>();
+            Rigidbody2D[] rigidbodies = playerObject.GetComponentsInChildren<Rigidbody2D>();
+
+            // 啟用渲染、碰撞和物理
+            foreach (var renderer in renderers)
+            {
+                renderer.enabled = true;
+            }
+            foreach (var collider in colliders)
+            {
+                collider.enabled = true;
+            }
+            foreach (var rb in rigidbodies)
+            {
+                rb.isKinematic = false;
+            }
+
+            // 設置玩家位置為最後對話位置
+            playerObject.transform.position = TriggerDialogue.lastDialoguePosition;
+
+            // 確保玩家的血量回復
+            PlayerHealth playerHealth = playerObject.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.playerHealth = playerHealth.maxHealth;  // 重置血量
+
+                // 更新血條
+                if (playerHealth.healthSlider != null)
+                {
+                    playerHealth.healthSlider.value = playerHealth.playerHealth;
+                }
+            }
+
+            Debug.Log("Player respawned via GameOverManager.");
+        }
+        else
+        {
+            Debug.LogError("Player object not found in the scene.");
+        }
+
+        // 隱藏 Game Over 畫面
+        gameOverPanel.SetActive(false);
+
+        // 恢復 UI 元素
+        foreach (var uiElement in uiElementsToDisable)
+        {
+            uiElement.SetActive(true);
+        }
+
+        // 恢復遊戲：將時間恢復正常（設置為 1）
+        Time.timeScale = 1;
     }
 
-    public void GoToMainMenu()
-    {
-        // 載入主菜單場景（確保主菜單場景名稱正確）
-        SceneManager.LoadScene("Menu");
-    }
+
+
+
+
+
+
 }

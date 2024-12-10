@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game-L02.unity
     guid: 2c9cc860ee6e74e70aca5814f5fa04c5
   - enabled: 1
+    path: "Assets/Scenes/Game-L02\u52D5\u756B.unity"
+    guid: c3b9f834c83cb9e4f9c246a6f0449ce9
+  - enabled: 1
     path: Assets/Scenes/Game-88.unity
     guid: 6762fdea44915a74581e426531ba28c9
   - enabled: 1

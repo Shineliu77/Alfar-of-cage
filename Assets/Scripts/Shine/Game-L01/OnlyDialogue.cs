@@ -33,6 +33,9 @@ public class OnlyDialogue : MonoBehaviour
             }
         }
 
+        // 暫停遊戲時間
+        Time.timeScale = 0f;
+
         if (Dialogues.Length > 0)
         {
             DialogueText.text = Dialogues[0]; // 顯示第一句對話
@@ -57,6 +60,9 @@ public class OnlyDialogue : MonoBehaviour
                     obj.SetActive(true); // 啟用每個物件
                 }
             }
+
+            // 對話結束後，恢復遊戲時間
+            Time.timeScale = 1f; // 恢復遊戲進行
 
             // 對話結束後，重新啟用 PlayerControl
             if (playerControl != null)

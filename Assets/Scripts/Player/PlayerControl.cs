@@ -158,12 +158,39 @@ public class PlayerControl : MonoBehaviour
 
     public void Die()
     {
-        // 玩家死亡處理邏輯，比如重新開始遊戲或顯示死亡畫面
+        // 玩家死亡處理邏輯
         Debug.Log("Player Died");
-        // 停止所有玩家的操作，這裡可以根據需求進行調整
-        Destroy(gameObject);
+
+        // 停止遊戲：將時間設置為 0（暫停遊戲）
+        Time.timeScale = 0;
+
+        // 停止玩家的操作：禁用物理和碰撞，保持玩家物件存在但不可見
+        SpriteRenderer[] renderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
+        Collider2D[] colliders = gameObject.GetComponentsInChildren<Collider2D>();
+        Rigidbody2D[] rigidbodies = gameObject.GetComponentsInChildren<Rigidbody2D>();
+
+        // 禁用渲染、碰撞和物理
+        foreach (var renderer in renderers)
+        {
+            renderer.enabled = false;
+        }
+        foreach (var collider in colliders)
+        {
+            collider.enabled = false;
+        }
+        foreach (var rb in rigidbodies)
+        {
+            rb.isKinematic = true;
+        }
+
+        // 顯示 Game Over 畫面
         GameObject.FindObjectOfType<GameOverManager>().ShowGameOver();
     }
+
+
+
+
+
 
     private void FlashRed()
     {

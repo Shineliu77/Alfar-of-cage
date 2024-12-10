@@ -10,12 +10,14 @@ public class Flower : MonoBehaviour
     public bool canUse;
     public bool playerin;
 
-    [Header("�p�ɾ�")]
+    [Header("等待時間")]
     public float waitTime;
     public float waitTimeCounter;
     public bool wait;
 
-   
+    [Header("指定玩家")]
+    public GameObject specificPlayer; // 指定的玩家物件
+
     private void Start()
     {
         canUse = true;
@@ -26,43 +28,30 @@ public class Flower : MonoBehaviour
     {
         flower.SetActive(canUse);
         smallflower.SetActive(wait);
-        //timeCounter();
 
-        if(playerin==true && Input.GetKeyDown(KeyCode.Q))
+        // 確保只有特定玩家在範圍內時執行邏輯
+        if (playerin && Input.GetKeyDown(KeyCode.Q))
         {
             wait = true;
             canUse = false;
         }
-
     }
-
-    /*public void timeCounter()
-    {
-        if(wait==true)
-        {
-            waitTimeCounter -= Time.deltaTime;
-            if(waitTimeCounter<=0)
-            {
-                wait = false;
-                canUse = true;
-                waitTimeCounter = waitTime;
-            }
-        }
-    }*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        // 確認進入範圍的物件是否是指定的玩家
+        if (collision.gameObject == specificPlayer)
         {
             playerin = true;
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        // 確認離開範圍的物件是否是指定的玩家
+        if (collision.gameObject == specificPlayer)
         {
             playerin = false;
         }
     }
-
 }

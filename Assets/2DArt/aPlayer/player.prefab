@@ -458,6 +458,8 @@ MonoBehaviour:
   hailPrefab: {fileID: 8898610686977420234, guid: cbb27c8755de6454790f6e7efab3b088, type: 3}
   hailDamage: 10
   targetTag: TargetObject
+  treeTag: tree
+  iceTreeTag: Ground
 --- !u!114 &2295995906956723025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -898,6 +900,7 @@ GameObject:
   - component: {fileID: 4086832577929287122}
   - component: {fileID: 6073194893102123322}
   - component: {fileID: 8672187991454971124}
+  - component: {fileID: 827193253014855683}
   m_Layer: 0
   m_Name: player_Time
   m_TagString: Untagged
@@ -1144,6 +1147,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillSound: {fileID: 8300000, guid: 01025879ffdfeed4fa52e61ba959c23b, type: 3}
   audioSource: {fileID: 3471478737830770437}
+--- !u!114 &827193253014855683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6073194893102123321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1bee9a38c3d99641bc3fb4f6d5f3298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillRange: 5
+  skillDuration: 5
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  GearLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &7279492279229328723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,7 +1285,7 @@ GameObject:
   - component: {fileID: 5510439085460892578}
   - component: {fileID: 986919282009551350}
   - component: {fileID: 2817626424488567233}
-  - component: {fileID: 1942462622839677370}
+  - component: {fileID: 3569651262512743908}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -1393,6 +1416,8 @@ MonoBehaviour:
   knockbackTime: 0.2
   damageAudio: {fileID: 0}
   control: {fileID: 5838105465604780408}
+  damageTag: tree
+  collisionDamage: 10
 --- !u!114 &986919282009551350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1406,7 +1431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSound: {fileID: 8300000, guid: 5d608b23c5c571543b41e13b762f010d, type: 3}
-  jumpSound: {fileID: 8300000, guid: f9b4ab40a0de59241a78624e80b93210, type: 3}
+  jumpSound: {fileID: 0}
   walkSoundInterval: 0.3
 --- !u!82 &2817626424488567233
 AudioSource:
@@ -1504,7 +1529,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1942462622839677370
+--- !u!114 &3569651262512743908
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1513,17 +1538,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7794321005297349222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1bee9a38c3d99641bc3fb4f6d5f3298, type: 3}
+  m_Script: {fileID: 11500000, guid: 370eb7cda7e0b4b47ac2f80e8a8300e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillRange: 5
-  skillDuration: 5
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  GearLayer:
-    serializedVersion: 2
-    m_Bits: 512
+  NextSceneName: 
 --- !u!1 &7849130467420802642
 GameObject:
   m_ObjectHideFlags: 0
