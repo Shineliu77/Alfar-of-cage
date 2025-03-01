@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BossController : MonoBehaviour
@@ -9,21 +8,25 @@ public class BossController : MonoBehaviour
     public float attackCooldown = 2f;
     public int baseDamage = 10;
     public int maxDamage = 30;
-    public float knockbackForce = 5f; // 撞擊時給玩家的擊退力
+    public float knockbackForce = 5f;
+    public float waitTimeAtPoint = 5f; // 停留時間
+    public float spikeYPosition = -3f; // 地刺固定的 Y 軸位置
+
     public Transform player;
-    public Transform[] movePoints;   // 定義移動點
-    private int currentMovePointIndex = 0;  // 追蹤當前目標點的索引
+    public Transform[] movePoints;
+    public GameObject spikePrefab;
+    public Animator bossAnimator;
 
-
+    private int currentMovePointIndex = 0;
     private float lastAttackTime = 0f;
+    private bool isWaiting = false;
     private Rigidbody2D rb;
     private BossHealth bossHealth;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        bossHealth = GetComponent<BossHealth>(); // 確保取得 BossHealth
-
+        bossHealth = GetComponent<BossHealth>();
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -32,8 +35,11 @@ public class BossController : MonoBehaviour
 
     void Update()
     {
-        MoveBoss();
-        AttackPlayer();
+        if (!isWaiting)
+        {
+            MoveBoss();
+            AttackPlayer();
+        }
     }
 
     void MoveBoss()
@@ -41,70 +47,80 @@ public class BossController : MonoBehaviour
         if (movePoints.Length > 0)
         {
             float distanceToTarget = Vector2.Distance(transform.position, movePoints[currentMovePointIndex].position);
-
-            // 移動到目標點
             transform.position = Vector2.MoveTowards(transform.position, movePoints[currentMovePointIndex].position, chaseSpeed * Time.deltaTime);
 
-            // 當 BOSS 到達目標點後，切換到下一個移動點
-            if (distanceToTarget < 0.1f) // 判斷是否到達目標點
+            if (distanceToTarget < 0.1f)
             {
-                // 切換到下一個點
-                currentMovePointIndex = (currentMovePointIndex + 1) % movePoints.Length;  // 循環移動點
+                StartCoroutine(WaitAndAttack());
             }
         }
     }
 
-        void AttackPlayer()
-        {
-            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+    IEnumerator WaitAndAttack()
+    {
+        isWaiting = true;
+        yield return new WaitForSeconds(waitTimeAtPoint);
+        bossAnimator.SetTrigger("SpikeAttack"); // 播放攻擊動畫
+    }
 
+    public void SpawnSpikes()
+    {
+        Vector2 spikeLeftPos = new Vector2(transform.position.x - 2, spikeYPosition);
+        Vector2 spikeRightPos = new Vector2(transform.position.x + 2, spikeYPosition);
+
+        Instantiate(spikePrefab, spikeLeftPos, Quaternion.identity);
+        Instantiate(spikePrefab, spikeRightPos, Quaternion.identity);
+
+        currentMovePointIndex = (currentMovePointIndex + 1) % movePoints.Length;
+        isWaiting = false;
+    }
+
+    void AttackPlayer()
+    {
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         if (distanceToPlayer < detectionRange && Time.time - lastAttackTime >= attackCooldown)
-            {
-                // 計算傷害
-                float impactSpeed = rb.velocity.magnitude;
-                int damage = Mathf.Clamp((int)(baseDamage * impactSpeed), baseDamage, maxDamage);
-                // 對玩家造成傷害並施加擊退
-                PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
-                if (playerHealth != null)
-                {
-                    playerHealth.TakeDamage(damage);
-                }
-
-                lastAttackTime = Time.time;
-            }
-        }
-
-        // 撞擊 BOSS 受到傷害
-        void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Enemy"))
+            float impactSpeed = rb.velocity.magnitude;
+            int damage = Mathf.Clamp((int)(baseDamage * impactSpeed), baseDamage, maxDamage);
+
+            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
             {
-                if (Time.time - lastAttackTime >= attackCooldown)
-                {
-                    // 計算傷害
-                    float impactSpeed = rb.velocity.magnitude;
-                    int damage = Mathf.Clamp((int)(baseDamage * impactSpeed), baseDamage, maxDamage);
-
-                    // 對玩家造成傷害
-                    PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-                    if (playerHealth != null)
-                    {
-                        playerHealth.TakeDamage(damage);
-                    }
-
-                    lastAttackTime = Time.time;
-                }
+                playerHealth.TakeDamage(damage);
+                KnockbackPlayer();
             }
-        }
-
-        public void TakeDamage(int damage)
-        {
-            if (bossHealth != null)
-            {
-                bossHealth.TakeDamage(damage);
-            }
+            lastAttackTime = Time.time;
         }
     }
 
+    void KnockbackPlayer()
+    {
+        Vector2 knockbackDirection = (player.position - transform.position).normalized;
+        player.GetComponent<Rigidbody2D>().AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
+    }
 
-  
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            float impactSpeed = rb.velocity.magnitude;
+            int damage = Mathf.Clamp((int)(baseDamage * impactSpeed), baseDamage, maxDamage);
+
+            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damage);
+                KnockbackPlayer();
+            }
+            lastAttackTime = Time.time;
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if (bossHealth != null)
+        {
+            bossHealth.TakeDamage(damage);
+        }
+    }
+}
