@@ -187,14 +187,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseSpeed: 40
-  detectionRange: 10
   returnSpeed: 5
-  patrolArea: {x: 15, y: 15}
-  attackCooldown: 2
-  baseDamage: 10
-  maxDamage: 30
+  attackCooldown: 4
+  damage: 10
   enemyHealth: 50
   knockbackForce: 5
+  detectionRangeX: 6
   player: {fileID: 2607264290042320674, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
   startingPosition: {fileID: 0}
 --- !u!95 &6286677564019499030

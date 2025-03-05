@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 483745405358714445}
   - component: {fileID: 1525686939384365214}
   - component: {fileID: 4912188197907214979}
+  - component: {fileID: 2672347954094382932}
   m_Layer: 0
   m_Name: "\u5E73\u53F0 (1)"
   m_TagString: SkillUse
@@ -155,7 +156,6 @@ MonoBehaviour:
   posB: {fileID: 5951294837712221970}
   speed: 3
   Ground: {fileID: 4912188197907214979}
-  move: {fileID: 0}
 --- !u!60 &4912188197907214979
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -184,6 +184,47 @@ PolygonCollider2D:
     - - {x: -0.0047073364, y: -1.5902891}
       - {x: -1.9932959, y: -0.45748317}
       - {x: 2.000114, y: -0.4700935}
+--- !u!114 &2672347954094382932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5477718645401747293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.437
+  m_Color: {r: 1, g: 0.759434, b: 0.9900035, a: 1}
+  m_Intensity: 2.95
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: c1599381
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0.5
+  m_PointLightOuterRadius: 4
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &5951294837712221969
 GameObject:
   m_ObjectHideFlags: 0

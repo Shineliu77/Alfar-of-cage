@@ -1281,7 +1281,6 @@ GameObject:
   - component: {fileID: 7562941554333152828}
   - component: {fileID: 658141465398613923}
   - component: {fileID: 5838105465604780408}
-  - component: {fileID: 4313874352102088606}
   - component: {fileID: 5510439085460892578}
   - component: {fileID: 986919282009551350}
   - component: {fileID: 2817626424488567233}
@@ -1380,23 +1379,6 @@ MonoBehaviour:
   feet: {fileID: 658141465398613923}
   maxHealth: 3
   spriteRenderer: {fileID: 8653957550509280896}
---- !u!114 &4313874352102088606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7794321005297349222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233d07349002b00498eeabdb00b4b642, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  magicMissilePrefab: {fileID: 6644551871252596991, guid: fff6a9aa8cee39d47a75d699dacec47b, type: 3}
-  firePoint: {fileID: 1327521126053606428}
-  missileSpeed: 10
-  attackRange: 10
-  attackDamage: 5
 --- !u!114 &5510439085460892578
 MonoBehaviour:
   m_ObjectHideFlags: 0

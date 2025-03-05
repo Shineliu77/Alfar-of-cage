@@ -756,7 +756,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8448099182944524721}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.751486, y: 5.3973017, z: 124.95514}
+  m_LocalPosition: {x: -17.751486, y: 5.397302, z: 124.95514}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4024410758811751644}
@@ -1419,11 +1419,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7882436373815063352, guid: 595c5f64a9a574ded9d3f960d106f8d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.619997
+      value: -3.6199894
       objectReference: {fileID: 0}
     - target: {fileID: 7882436373815063352, guid: 595c5f64a9a574ded9d3f960d106f8d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.2199996
+      value: -2.2199988
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 595c5f64a9a574ded9d3f960d106f8d2, type: 3}
@@ -1461,6 +1461,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4024410758811751644}
     m_Modifications:
+    - target: {fileID: 827193253014855683, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
+      propertyPath: skillCirclePrefab
+      value: 
+      objectReference: {fileID: 1255348291641886049, guid: 09d7ae6420db5584c9413920e51eedb1, type: 3}
     - target: {fileID: 986919282009551350, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
       propertyPath: jumpSound
       value: 
@@ -1516,6 +1520,58 @@ PrefabInstance:
     - target: {fileID: 5838105465604780408, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
       propertyPath: JumpPower
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432069381034605282, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432069381034605282, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
+      propertyPath: m_Color.g
+      value: 0.97441274
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432069381034605282, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8820755
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432069381034605282, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
+      propertyPath: m_Intensity
+      value: 1.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432069381034605282, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
+      propertyPath: m_LightType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432069381034605282, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
+      propertyPath: m_UseNormalMap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432069381034605282, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
+      propertyPath: m_PointLightQuality
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432069381034605282, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
+      propertyPath: m_LightVolumeOpacity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432069381034605282, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
+      propertyPath: m_PointLightDistance
+      value: 2.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432069381034605282, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
+      propertyPath: m_PointLightInnerRadius
+      value: 0.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432069381034605282, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 2.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432069381034605282, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432069381034605282, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[2]
+      value: -2121049663
       objectReference: {fileID: 0}
     - target: {fileID: 7794321005297349222, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
       propertyPath: m_Name
