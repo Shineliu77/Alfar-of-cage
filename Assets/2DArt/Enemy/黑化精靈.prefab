@@ -46,10 +46,10 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.52
-  m_Color: {r: 1, g: 0.26358995, b: 0, a: 1}
-  m_Intensity: 0.88
+  m_Color: {r: 0.509434, g: 0.051382452, b: 0.045656808, a: 1}
+  m_Intensity: 2
   m_LightVolumeOpacity: 0.19
-  m_ApplyToSortingLayers: 791c4443c5b3ec046f70cad900000000c70486018d79f903
+  m_ApplyToSortingLayers: 791c4443c7048601c1599381
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 1
   m_LightOrder: 0
@@ -191,6 +191,7 @@ MonoBehaviour:
   attackCooldown: 4
   damage: 10
   enemyHealth: 50
+  maxHealth: 50
   knockbackForce: 5
   detectionRangeX: 6
   player: {fileID: 2607264290042320674, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}

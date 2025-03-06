@@ -756,7 +756,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8448099182944524721}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.751486, y: 5.397302, z: 124.95514}
+  m_LocalPosition: {x: -5.3047304, y: -2.5726976, z: 124.95514}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4024410758811751644}
@@ -1513,6 +1513,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5510439085460892578, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
+      propertyPath: knockbackDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5838105465604780408, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
       propertyPath: Speed
       value: 10
@@ -1571,7 +1575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6432069381034605282, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[2]
-      value: -2121049663
+      value: -641044369
       objectReference: {fileID: 0}
     - target: {fileID: 7794321005297349222, guid: a31fbbeb7e0fbe341ac7a4b010c00e92, type: 3}
       propertyPath: m_Name
