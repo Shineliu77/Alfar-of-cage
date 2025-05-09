@@ -18,7 +18,10 @@ public class PlayerAnimetion : MonoBehaviour
 
     }
 
-
+    private void FixedUpdate()
+    {
+       
+    }
     private void Update()
     {
         SetAnimetion();
@@ -28,18 +31,14 @@ public class PlayerAnimetion : MonoBehaviour
         {
             //Debug.Log("Use");
             InUseSkill = true;
+            Skill.ResetTrigger("play");
+            Skill.SetTrigger("play");
         }
         else
         {
             InUseSkill = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Skill.ResetTrigger("play");
-            Skill.SetTrigger("play");
-        }
-        
 
         if (Input.GetKeyDown(KeyCode.Space))
         {

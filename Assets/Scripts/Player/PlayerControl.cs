@@ -127,13 +127,6 @@ public class PlayerControl : MonoBehaviour
 
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("DeadZone") )
-        {
-            Die();
-        }
-    }
 
     private IEnumerator CanHurtTimer()
     {
