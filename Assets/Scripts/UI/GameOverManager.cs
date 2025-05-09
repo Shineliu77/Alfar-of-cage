@@ -95,7 +95,10 @@ public class GameOverManager : MonoBehaviour
         // 恢復遊戲：將時間恢復正常（設置為 1）
         Time.timeScale = 1;
     }
-
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 
 
 
