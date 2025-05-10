@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3623954980094471617}
   - component: {fileID: 4481024913601677411}
-  - component: {fileID: 4086990457732197656}
+  - component: {fileID: 3649698342796620988}
   m_Layer: 5
   m_Name: sign
   m_TagString: SkillUse
@@ -47,8 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hit: {fileID: 2415374018019836380}
   player: {fileID: 2607264290042320674}
---- !u!70 &4086990457732197656
-CapsuleCollider2D:
+--- !u!61 &3649698342796620988
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -60,9 +60,19 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0, y: -1.8}
-  m_Size: {x: 4.45, y: 5.55}
-  m_Direction: 0
+  m_Offset: {x: 0, y: -1.13}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.5, y: 8}
+  m_EdgeRadius: 0
 --- !u!1 &1811230579724481423
 GameObject:
   m_ObjectHideFlags: 0

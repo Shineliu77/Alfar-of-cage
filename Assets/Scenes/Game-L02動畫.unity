@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 139523080}
-  animationStateName: BossNomal
+  animationStateName: BossEnd
   NextGameName: Game-88
 --- !u!1 &208936128
 GameObject:
@@ -12692,6 +12692,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1579724965}
     m_Modifications:
+    - target: {fileID: 3416953720961740660, guid: d680f2626c839b540a6810f82018b9e1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8620030284946019856, guid: d680f2626c839b540a6810f82018b9e1, type: 3}
       propertyPath: m_RootOrder
       value: 0
